@@ -63,7 +63,7 @@ export default function Home() {
           className="text-center"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-500">Your Name</span>
+            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-500">Ricky Elder</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
             I work at the intersection of <strong>Product</strong>, <strong>Go-To-Market</strong>, 
@@ -82,7 +82,7 @@ export default function Home() {
               Explore My Work
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:ricky.elder07@gmail.com"
               className="px-8 py-3 border-2 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-medium rounded-lg transition-colors"
             >
               Get In Touch

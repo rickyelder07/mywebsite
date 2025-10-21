@@ -13,23 +13,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name - Product, GTM & Software",
-    template: "%s | Your Name",
+    default: "Ricky Elder - Product, GTM & Software",
+    template: "%s | Ricky Elder",
   },
   description: "Personal website showcasing my work in Product, Go-To-Market, Software, and Personal interests.",
   keywords: ["product", "go-to-market", "software", "portfolio"],
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Ricky Elder" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
-    title: "Your Name - Product, GTM & Software",
+    url: "https://rickyelder.com",
+    title: "Ricky Elder - Product, GTM & Software",
     description: "Personal website showcasing my work in Product, Go-To-Market, Software, and Personal interests.",
-    siteName: "Your Name",
+    siteName: "Ricky Elder",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name - Product, GTM & Software",
+    title: "Ricky Elder - Product, GTM & Software",
     description: "Personal website showcasing my work in Product, Go-To-Market, Software, and Personal interests.",
   },
 };

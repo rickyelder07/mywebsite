@@ -27,7 +27,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           >
-            YN
+            RE
           </Link>
 
           {/* Desktop Navigation */}
