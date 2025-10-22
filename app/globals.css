@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #064b22;
 }
 
 .dark {
@@ -15,6 +16,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  accent-color: var(--accent);
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
