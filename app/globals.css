@@ -4,25 +4,41 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --accent: #064b22;
+  --foreground: #2d2d2d;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --border: #e5e7eb;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #2d2d2d;
+  --foreground: #ffffff;
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  accent-color: var(--accent);
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl;
+  }
+  
+  .light-card {
+    @apply bg-white dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 

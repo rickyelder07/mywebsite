@@ -2,32 +2,38 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { TargetIcon, RocketIcon, SparklesIcon } from "@/components/icons";
 
 const sections = [
   {
-    title: "Product",
+    title: "Product Strategy",
     href: "/product",
-    description: "Strategy, frameworks, and product launches",
-    icon: "📦",
+    description: "Building products from 0 to launch that solve real problems and create lasting value",
+    Icon: TargetIcon,
+    gradient: "from-blue-500/20 to-purple-500/20",
   },
   {
-    title: "Go-To-Market",
-    href: "/go-to-market",
-    description: "GTM strategy, positioning, and sales enablement",
-    icon: "🚀",
-  },
-  {
-    title: "Software",
-    href: "/software",
-    description: "Projects and contributions I've built",
-    icon: "💻",
+    title: "Experience",
+    href: "/experience",
+    description: "Cross-functional leadership across product, marketing, engineering, and operations",
+    Icon: RocketIcon,
+    gradient: "from-purple-500/20 to-pink-500/20",
   },
   {
     title: "Personal",
     href: "/personal",
-    description: "Reflections, values, and interests",
-    icon: "✨",
+    description: "Music, family, sports, and the things that make me who I am",
+    Icon: SparklesIcon,
+    gradient: "from-pink-500/20 to-orange-500/20",
   },
+];
+
+const highlights = [
+  "Cross-functional communicator connecting product strategy to business objectives",
+  "Experience taking products from 0 to launch",
+  "Leveraging AI to deliver results with quick turn-around prototyping",
+  "Business strategist with practical, results-driven approach",
 ];
 
 const containerVariants = {
@@ -55,79 +61,181 @@ export default function Home() {
   return (
     <div className="min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <section className="section-container py-20 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-500">Ricky Elder</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto">
-            I work at the intersection of <strong>Product</strong>, <strong>Go-To-Market</strong>, 
-            and <strong>Software</strong> — building things that matter.
-          </p>
+          {/* Headshot Image - Left Side */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="flex justify-center space-x-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="relative order-2 lg:order-1"
           >
-            <a
-              href="#sections"
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-            >
-              Explore My Work
-            </a>
-            <a
-              href="mailto:ricky.elder07@gmail.com"
-              className="px-8 py-3 border-2 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 text-gray-900 dark:text-white font-medium rounded-lg transition-colors"
-            >
-              Get In Touch
-            </a>
+            <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden">
+              <Image
+                src="/Ricky Elder Portfolio 91525.jpg"
+                alt="Ricky Elder - Product Manager"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              />
+            </div>
           </motion.div>
+          
+          {/* Main Content - Right Side */}
+          <div className="order-1 lg:order-2">
+            <motion.h1 
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              Hi, I&apos;m{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                Ricky Elder
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-300 mb-8 font-medium"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Data-driven Product Manager connecting business objectives to product strategy, 
+              leveraging AI to build engaging customer solutions.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.6 }}
+              className="flex flex-wrap gap-4"
+            >
+              <a
+                href="#explore"
+                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Explore My Work
+              </a>
+              <a
+                href="https://www.linkedin.com/in/richard-z-elder/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 glass-card hover:bg-black/40 text-white font-medium rounded-lg transition-all"
+              >
+                View LinkedIn
+              </a>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Highlights Section */}
+      <section className="section-container py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto"
+        >
+          <motion.p 
+            className="text-lg text-gray-400 mb-12 leading-relaxed text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            I am an analytical thinker who loves to understand corporate strategic decisions and 
+            optimize life through data. Growing up in the Bay Area, I live and breathe tech and am 
+            elated by the prospect of leveraging my skills and experience to transform products 
+            that have a global impact.
+          </motion.p>
+
+          <div className="glass-card p-8 md:p-12">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">What Defines My Approach</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {highlights.map((highlight, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * index }}
+                  className="flex items-start space-x-3"
+                >
+                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <p className="text-gray-300 leading-relaxed">{highlight}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </section>
 
       {/* Sections Grid */}
-      <section id="sections" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section id="explore" className="section-container py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Explore My Journey
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Dive into my work across product strategy, professional experience, and personal interests
+          </p>
+        </motion.div>
+        
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {sections.map((section) => (
             <motion.div key={section.href} variants={itemVariants}>
               <Link
                 href={section.href}
-                className="block p-8 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg group"
+                className="block h-full p-8 glass-card hover:bg-black/40 transition-all hover:shadow-2xl group relative overflow-hidden"
               >
-                <div className="text-4xl mb-4">{section.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors">
-                  {section.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {section.description}
-                </p>
-                <div className="mt-4 flex items-center text-blue-600 dark:text-blue-500 font-medium">
-                  Learn more
-                  <svg
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                <div className={`absolute inset-0 bg-gradient-to-br ${section.gradient} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                <div className="relative z-10">
+                  <div className="mb-6">
+                    <section.Icon className="w-16 h-16" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                    {section.title}
+                  </h3>
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
+                    {section.description}
+                  </p>
+                  <div className="mt-6 flex items-center text-blue-400 font-medium group-hover:text-blue-300">
+                    Learn more
+                    <svg
+                      className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform"
+                      fill="none"
+                      viewBox="0 0 20 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             </motion.div>
