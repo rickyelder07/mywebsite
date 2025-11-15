@@ -99,7 +99,7 @@ export default function ExperiencePage() {
             </div>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              I've had the opportunity to help a hydrogen fuel cell technology company grow from 3 to 
+              I&apos;ve had the opportunity to help a hydrogen fuel cell technology company grow from 3 to 
               over 20 employees. Throughout that time I earned significant responsibility as a leader 
               in multiple cross-functional roles supporting the development of novel products in an 
               emerging market. While working countless long nights and weekends I project managed 

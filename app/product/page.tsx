@@ -178,7 +178,7 @@ export default function ProductPage() {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Notable Products</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Products I've brought from concept to market
+            Products I&apos;ve brought from concept to market
           </p>
         </motion.div>
 
