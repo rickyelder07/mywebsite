@@ -92,7 +92,7 @@ export default function ExperiencePage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                   Zero Emission Industries
                 </h2>
-                <p className="text-xl text-blue-400">
+                <p className="text-xl text-orange-400">
                   Hard-tech Hydrogen Product Company
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function ExperiencePage() {
               in multiple cross-functional roles supporting the development of novel products in an 
               emerging market. While working countless long nights and weekends I project managed 
               multiple world firsts, launched a novel hydrogen refueling product, built a marketing 
-              org, was tested creatively, wrote and won <span className="text-blue-400 font-semibold">$7.25M worth of grants</span>, 
+              org, was tested creatively, wrote and won <span className="text-orange-400 font-semibold">$7.25M worth of grants</span>, 
               led multiple teams and strategic company initiatives, got my Commercial HazMat License 
               to fuel a race car, and made some friends for life.
             </p>
@@ -173,7 +173,7 @@ export default function ExperiencePage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Grant Writing & Fundraising</h4>
                   <p className="text-gray-300">Wrote and won $7.25M in grants to fund R&D and product development</p>
@@ -181,7 +181,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Product Launch</h4>
                   <p className="text-gray-300">Successfully launched novel hydrogen refueling product to market</p>
@@ -189,7 +189,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Team Building</h4>
                   <p className="text-gray-300">Helped scale company from 3 to 20+ employees</p>
@@ -197,7 +197,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Marketing Organization</h4>
                   <p className="text-gray-300">Built marketing org from ground up to support product launches</p>
@@ -205,7 +205,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">World-First Projects</h4>
                   <p className="text-gray-300">Project managed multiple world-first hydrogen fuel cell applications</p>
@@ -213,7 +213,7 @@ export default function ExperiencePage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">Hands-On Leadership</h4>
                   <p className="text-gray-300">Got Commercial HazMat License to support race team operations</p>
@@ -241,7 +241,7 @@ export default function ExperiencePage() {
           </p>
           <Link
             href="/product"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View Product Strategy
           </Link>

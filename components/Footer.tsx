@@ -49,7 +49,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/richard-z-elder/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-orange-400 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -65,7 +65,7 @@ export default function Footer() {
                 href="https://github.com/rickyelder07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-orange-400 transition-colors"
                 aria-label="GitHub"
               >
                 <svg
@@ -79,7 +79,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:ricky.elder07@gmail.com"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 hover:text-orange-400 transition-colors"
                 aria-label="Email"
               >
                 <svg

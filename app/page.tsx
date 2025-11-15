@@ -11,21 +11,21 @@ const sections = [
     href: "/product",
     description: "Building products from 0 to launch that solve real problems and create lasting value",
     Icon: TargetIcon,
-    gradient: "from-blue-500/20 to-purple-500/20",
+    gradient: "from-orange-500/20 to-amber-500/20",
   },
   {
     title: "Experience",
     href: "/experience",
     description: "Cross-functional leadership across product, marketing, engineering, and operations",
     Icon: RocketIcon,
-    gradient: "from-purple-500/20 to-pink-500/20",
+    gradient: "from-amber-500/20 to-orange-600/20",
   },
   {
     title: "Personal",
     href: "/personal",
     description: "Music, family, sports, and the things that make me who I am",
     Icon: SparklesIcon,
-    gradient: "from-pink-500/20 to-orange-500/20",
+    gradient: "from-orange-600/20 to-red-500/20",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function Home() {
               transition={{ delay: 0.3 }}
             >
               Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
                 Ricky Elder
               </span>
             </motion.h1>
@@ -119,7 +119,7 @@ export default function Home() {
             >
               <a
                 href="#explore"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Explore My Work
               </a>
@@ -170,7 +170,7 @@ export default function Home() {
                   transition={{ delay: 0.1 * index }}
                   className="flex items-start space-x-3"
                 >
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2" />
+                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
                   <p className="text-gray-300 leading-relaxed">{highlight}</p>
                 </motion.div>
               ))}
@@ -220,12 +220,12 @@ export default function Home() {
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                     {section.description}
                   </p>
-                  <div className="mt-6 flex items-center text-blue-400 font-medium group-hover:text-blue-300">
+                  <div className="mt-6 flex items-center text-orange-400 font-medium group-hover:text-orange-300">
                     Learn more
                     <svg
                       className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform"
                       fill="none"
-                      viewBox="0 0 20 24"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
                       <path

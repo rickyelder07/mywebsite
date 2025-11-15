@@ -218,7 +218,7 @@ export default function ProductPage() {
                 {product.tags.map((tag, tIndex) => (
                   <span
                     key={tIndex}
-                    className="px-4 py-1.5 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30"
+                    className="px-4 py-1.5 bg-orange-500/20 text-orange-400 text-sm rounded-full border border-orange-500/30"
                   >
                     {tag}
                   </span>
@@ -252,7 +252,7 @@ export default function ProductPage() {
           </p>
           <Link
             href="/experience"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View My Experience
           </Link>
