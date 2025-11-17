@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { UsersIcon, ChartIcon, RocketIcon, TargetIcon } from "@/components/icons";
 
 const fadeInUp = {
@@ -45,12 +46,12 @@ const frameworks = [
 const products = [
   {
     name: "FTcase",
-    tagline: "High-Performance Hydrogen Fuel Cell System",
-    description: "Led product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for motorsport applications.",
+    tagline: "Hydrogen Fueling Devise Ensuring Safe, Simple, and Cost Effecting Gaseous Fuel Transfer.",
+    description: "Supported product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for enabling technology adoption in an emerging and dynamic market.",
     highlights: [
       "Product Development Experience - Guided cross-functional teams through complex technical challenges",
       "Product Inception to Launch - Managed entire product lifecycle in an emerging market",
-      "Customer Engagement - Partnered with Honda Racing for Pikes Peak International Hill Climb",
+      "Customer Engagement - Led Partnership with Honda Racing for Pikes Peak International Hill Climb",
     ],
     tags: ["0 to 1", "Hardware", "Customer Development", "Launch"],
     imageNote: "Space for product photos",
@@ -86,7 +87,7 @@ export default function ProductPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="section-container py-20">
+      <div className="section-container pt-20 pb-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -98,8 +99,31 @@ export default function ProductPage() {
             Product Strategy
           </h1>
           <p className="text-2xl text-gray-300 mb-8">
-            Building products from 0 to launch that solve real problems and create lasting value.
+            Building products from 0 to launch that solve real problems and <br />
+            create lasting value.
           </p>
+        </motion.div>
+      </div>
+
+      {/* Supporting Image */}
+      <div className="w-full pt-2 pb-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full"
+        >
+          <div className="relative w-full h-[40vh] overflow-hidden opacity-80">
+            <Image
+              src="/Ricky Explaining.jpg"
+              alt="Ricky explaining product strategy"
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+              style={{ objectPosition: 'center 40%' }}
+            />
+          </div>
         </motion.div>
       </div>
 
@@ -112,7 +136,7 @@ export default function ProductPage() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="glass-card p-8 md:p-12">
+          <div className="bg-olive-500/20 backdrop-blur-sm border border-olive-500/30 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl font-bold text-white mb-6">My Approach</h2>
             <p className="text-lg text-gray-300 leading-relaxed">
               I believe great products start with deep customer understanding. I work hard to understand 
@@ -218,7 +242,7 @@ export default function ProductPage() {
                 {product.tags.map((tag, tIndex) => (
                   <span
                     key={tIndex}
-                    className="px-4 py-1.5 bg-orange-500/20 text-orange-400 text-sm rounded-full border border-orange-500/30"
+                    className="px-4 py-1.5 bg-olive-500/20 text-olive-400 text-sm rounded-full border border-olive-500/30"
                   >
                     {tag}
                   </span>
@@ -252,7 +276,7 @@ export default function ProductPage() {
           </p>
           <Link
             href="/experience"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-olive-600 to-olive-500 hover:from-olive-700 hover:to-olive-600 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View My Experience
           </Link>

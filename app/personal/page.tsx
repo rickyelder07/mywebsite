@@ -66,7 +66,7 @@ export default function PersonalPage() {
                 In my free time I love to find ways to express myself creatively. For many years now, 
                 I have performed sax in a band with my old roommate in venues across SF. Late last year 
                 I co-developed a contemporary dance show with my partner who choreographed 13 pieces I 
-                made the music for, titled <span className="text-orange-400 font-semibold">&quot;By Heart&quot;</span>.
+                made the music for, titled <span className="text-olive-400 font-semibold">&quot;By Heart&quot;</span>.
               </p>
 
               <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/10">
@@ -132,14 +132,14 @@ export default function PersonalPage() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                <div className="p-4 bg-orange-500/10 rounded-lg border border-orange-500/30">
-                  <h4 className="text-xl font-bold text-orange-400 mb-2">NABA</h4>
+                <div className="p-4 bg-olive-500/10 rounded-lg border border-olive-500/30">
+                  <h4 className="text-xl font-bold text-olive-400 mb-2">NABA</h4>
                   <p className="text-gray-300 text-sm">
                     Competitive fast-pitch baseball league in the Bay Area
                   </p>
                 </div>
-                <div className="p-4 bg-amber-500/10 rounded-lg border border-amber-500/30">
-                  <h4 className="text-xl font-bold text-amber-400 mb-2">VOLO Leagues</h4>
+                <div className="p-4 bg-olive-400/10 rounded-lg border border-olive-400/30">
+                  <h4 className="text-xl font-bold text-olive-300 mb-2">VOLO Leagues</h4>
                   <p className="text-gray-300 text-sm">
                     Various recreational sports leagues across San Francisco
                   </p>
@@ -252,7 +252,7 @@ export default function PersonalPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:ricky.elder07@gmail.com"
-              className="px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="px-8 py-3 bg-gradient-to-r from-olive-600 to-olive-500 hover:from-olive-700 hover:to-olive-600 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Get In Touch
             </a>

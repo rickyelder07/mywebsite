@@ -7,25 +7,33 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
+  safelist: [
+    {
+      pattern: /(text|bg|border|from|to|via)-(olive)-(50|100|200|300|400|500|600|700|800|900)/,
+    },
+    {
+      pattern: /(text|bg|border|from|to|via)-(olive)-(50|100|200|300|400|500|600|700|800|900)\/(10|20|30|40|50|60|70|80|90)/,
+    },
+  ],
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#f97316",
-          dark: "#ea580c",
+          DEFAULT: "#84a98c",
+          dark: "#52796f",
         },
         "dark-grey": "#2d2d2d",
-        "autumn-orange": {
-          50: "#fff7ed",
-          100: "#ffedd5",
-          200: "#fed7aa",
-          300: "#fdba74",
-          400: "#fb923c",
-          500: "#f97316",
-          600: "#ea580c",
-          700: "#c2410c",
-          800: "#9a3412",
-          900: "#7c2d12",
+        "olive": {
+          50: "#f7f9f7",
+          100: "#e8ede9",
+          200: "#cad2c5",
+          300: "#a3b899",
+          400: "#84a98c",
+          500: "#52796f",
+          600: "#354f52",
+          700: "#2f3e46",
+          800: "#1e2d2f",
+          900: "#0d1b1e",
         },
       },
       fontFamily: {

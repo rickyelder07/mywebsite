@@ -11,29 +11,22 @@ const sections = [
     href: "/product",
     description: "Building products from 0 to launch that solve real problems and create lasting value",
     Icon: TargetIcon,
-    gradient: "from-orange-500/20 to-amber-500/20",
+    gradient: "from-olive-500/20 to-olive-400/20",
   },
   {
     title: "Experience",
     href: "/experience",
     description: "Cross-functional leadership across product, marketing, engineering, and operations",
     Icon: RocketIcon,
-    gradient: "from-amber-500/20 to-orange-600/20",
+    gradient: "from-olive-600/20 to-olive-500/20",
   },
   {
     title: "Personal",
     href: "/personal",
     description: "Music, family, sports, and the things that make me who I am",
     Icon: SparklesIcon,
-    gradient: "from-orange-600/20 to-red-500/20",
+    gradient: "from-olive-400/20 to-olive-300/20",
   },
-];
-
-const highlights = [
-  "Cross-functional communicator connecting product strategy to business objectives",
-  "Experience taking products from 0 to launch",
-  "Leveraging AI to deliver results with quick turn-around prototyping",
-  "Business strategist with practical, results-driven approach",
 ];
 
 const containerVariants = {
@@ -95,8 +88,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              <span className="text-olive-400">
                 Ricky Elder
               </span>
             </motion.h1>
@@ -119,7 +111,7 @@ export default function Home() {
             >
               <a
                 href="#explore"
-                className="px-8 py-3 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="px-8 py-3 bg-gradient-to-r from-olive-600 to-olive-500 hover:from-olive-700 hover:to-olive-600 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 Explore My Work
               </a>
@@ -136,49 +128,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Highlights Section */}
-      <section className="section-container py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto"
-        >
-          <motion.p 
-            className="text-lg text-gray-400 mb-12 leading-relaxed text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            I am an analytical thinker who loves to understand corporate strategic decisions and 
-            optimize life through data. Growing up in the Bay Area, I live and breathe tech and am 
-            elated by the prospect of leveraging my skills and experience to transform products 
-            that have a global impact.
-          </motion.p>
-
-          <div className="glass-card p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">What Defines My Approach</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {highlights.map((highlight, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 * index }}
-                  className="flex items-start space-x-3"
-                >
-                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 mt-2" />
-                  <p className="text-gray-300 leading-relaxed">{highlight}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
       {/* Sections Grid */}
       <section id="explore" className="section-container py-20">
         <motion.div
@@ -191,9 +140,18 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Explore My Journey
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Dive into my work across product strategy, professional experience, and personal interests
-          </p>
+          <motion.p 
+            className="text-lg md:text-xl text-gray-300 leading-relaxed text-center max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            I am an analytical thinker who loves to understand corporate strategic decisions and 
+            optimize life through data. Growing up in the Bay Area, I live and breathe tech and am 
+            elated by the prospect  and aim to leverage my skills and experience to transform products 
+            that have a global impact. 
+          </motion.p>
         </motion.div>
         
         <motion.div
@@ -214,13 +172,13 @@ export default function Home() {
                   <div className="mb-6">
                     <section.Icon className="w-16 h-16" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-olive-400 transition-colors">
                     {section.title}
                   </h3>
                   <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
                     {section.description}
                   </p>
-                  <div className="mt-6 flex items-center text-orange-400 font-medium group-hover:text-orange-300">
+                  <div className="mt-6 flex items-center text-olive-400 font-medium group-hover:text-olive-300">
                     Learn more
                     <svg
                       className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform"
