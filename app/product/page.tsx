@@ -46,14 +46,15 @@ const frameworks = [
 const products = [
   {
     name: "FTcase",
-    tagline: "Hydrogen Fueling Devise Ensuring Safe, Simple, and Cost Effecting Gaseous Fuel Transfer.",
+    tagline: "Hydrogen Fueling Device Ensuring Safe, Simple, and Cost Effecting Gaseous Fuel Transfer.",
     description: "Supported product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for enabling technology adoption in an emerging and dynamic market.",
     highlights: [
-      "Product Development Experience - Guided cross-functional teams through complex technical challenges",
-      "Product Inception to Launch - Managed entire product lifecycle in an emerging market",
-      "Customer Engagement - Led Partnership with Honda Racing for Pikes Peak International Hill Climb",
+      "PM and PMM Experience - Guided cross-functional teams through technical, go-to-market, and product challenges",
+      "Product Inception to First Customer - Supported entire product strategy from grant funded prototype to production launch",
+      "Product Launch Strategy - Owned the strategy, messaging, and execution for public product launch in Q3 2024",
+      "Customer Engagement - Led partnership with Honda Racing Corporation in Pikes Peak International Hill Climb",
     ],
-    tags: ["0 to 1", "Hardware", "Customer Development", "Launch"],
+    tags: ["0 to 1", "Hardware", "Customer Development", "Launch Strategy"],
     imageNote: "Space for product photos",
   },
   {
@@ -249,10 +250,85 @@ export default function ProductPage() {
                 ))}
               </div>
 
-              <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
-                <p className="text-gray-400 text-sm italic">
-                  {product.imageNote}
-                </p>
+              <div className="mt-6">
+                {product.name === "FTcase" ? (
+                  <div className="p-4 bg-white/5 rounded-lg border border-white/10 space-y-6">
+                    {/* FTcase Images Side by Side */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                        <Image
+                          src="/FTcase.jpg"
+                          alt="FTcase Hydrogen Fueling Device"
+                          width={1200}
+                          height={675}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                      <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                        <Image
+                          src="/FTcase Desert Fueling.jpg"
+                          alt="FTcase Desert Fueling"
+                          width={1200}
+                          height={675}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Honda Racing Racecar Fueled by FTcase and FTcase Fueling Side by Side */}
+                    <div>
+                      <h4 className="text-xl font-bold text-center mb-3">
+                        <a
+                          href="https://www.forbes.com/sites/edgarsten/2025/06/18/suitcase-sized-device-to-pump-hydrogen-into-honda-fuel-cell-pikes-peak-racer/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white hover:text-gray-300 transition-colors underline decoration-white/50 hover:decoration-gray-300 decoration-2 underline-offset-4 inline-flex items-center gap-2"
+                        >
+                          Honda Racing Fuel Cell CRV Fueled by FTcase
+                        </a>
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/HRC and FTcase.jpg"
+                            alt="Honda Racing Corporation racecar fueled by FTcase"
+                            width={1200}
+                            height={675}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/FTcase fueling.jpg"
+                            alt="FTcase fueling operation"
+                            width={1200}
+                            height={675}
+                            className="object-cover w-full h-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* HRC Lineup */}
+                    <div className="flex justify-center">
+                      <div className="relative w-full max-w-4xl rounded-lg overflow-hidden" style={{ aspectRatio: '16/5.4' }}>
+                        <Image
+                          src="/HRC Lineup.jpg"
+                          alt="Honda Racing Corporation lineup"
+                          width={1200}
+                          height={675}
+                          className="object-cover object-center w-full h-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                    <p className="text-gray-400 text-sm italic">
+                      {product.imageNote}
+                    </p>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
