@@ -107,7 +107,7 @@ export default function Footer() {
               © {currentYear} Ricky Elder. All rights reserved.
             </div>
             <div className="text-sm text-gray-400">
-              Built with Next.js, Tailwind CSS, and Claude 4.5 Sonnet
+            Built with Next.js, TypeScript & Tailwind CSS • Deployed on Vercel
             </div>
           </div>
         </div>

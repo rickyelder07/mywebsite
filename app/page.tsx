@@ -99,8 +99,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Data-driven Product Manager connecting business objectives to product strategy, 
-              leveraging AI to build engaging customer solutions.
+              Product Manager and Professional Business Leader leveraging a unique startup background to connect organizational objectives to product strategy.
             </motion.p>
             
             <motion.div

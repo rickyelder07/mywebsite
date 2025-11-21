@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { MusicIcon, HeartIcon, BaseballIcon, TargetIcon, SproutIcon, HandshakeIcon, LightningIcon } from "@/components/icons";
 
 const fadeInUp = {
@@ -33,7 +34,7 @@ export default function PersonalPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Beyond Product
           </h1>
-          <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-2xl text-gray-300 mb-0 leading-relaxed">
             The experiences, passions, and relationships that shape who I am
           </p>
         </motion.div>
@@ -52,10 +53,10 @@ export default function PersonalPage() {
           <motion.section variants={fadeInUp}>
             <div className="glass-card p-8 md:p-12">
               <div className="flex items-start space-x-4 mb-6">
-                <div>
+              <div>
                   <MusicIcon className="w-12 h-12" />
-                </div>
-                <div>
+              </div>
+              <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Music and Arts
                   </h2>
@@ -64,15 +65,41 @@ export default function PersonalPage() {
               
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 In my free time I love to find ways to express myself creatively. For many years now, 
-                I have performed sax in a band with my old roommate in venues across SF. Late last year 
+                I have performed sax in a band with my old roommate{" "}
+                <a
+                  href="https://open.spotify.com/artist/4ZAwnJGuqLChoBQZe8MUe1?si=p8YlzKofRI-W1kVir9jj6A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-olive-400 hover:text-olive-300 underline transition-colors font-semibold"
+                >
+                  Jolene Lozano
+                </a>{" "}
+                in venues across SF. Late last year 
                 I co-developed a contemporary dance show with my partner who choreographed 13 pieces I 
                 made the music for, titled <span className="text-olive-400 font-semibold">&quot;By Heart&quot;</span>.
               </p>
 
               <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/10">
-                <p className="text-gray-400 text-sm italic">
-                  Space for photos from performances and the &quot;By Heart&quot; show
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 -gap-4 md:-gap-8">
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden z-10 mt-[14%]">
+                    <Image
+                      src="/by heart.png"
+                      alt="By Heart performance"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                  <div className="relative w-full aspect-[4/4] rounded-lg overflow-hidden md:-ml-8 z-0">
+                    <Image
+                      src="/saxophone.png"
+                      alt="Saxophone performance"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </motion.section>
@@ -87,20 +114,26 @@ export default function PersonalPage() {
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Family and Connection
-                  </h2>
-                </div>
+            </h2>
+              </div>
               </div>
               
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Family has always been the foundation of my character. I attribute my care and compassion 
                 toward others to the thoughtful and giving environment I was raised in. The values instilled 
                 in me by my family continue to guide how I approach relationships, both personal and professional.
-              </p>
+                </p>
 
               <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/10">
-                <p className="text-gray-400 text-sm italic">
-                  Space for family photos
-                </p>
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/family.png"
+                    alt="Family photo"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                </div>
               </div>
             </div>
           </motion.section>
@@ -115,7 +148,7 @@ export default function PersonalPage() {
                 <div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Sports and Data
-                  </h2>
+            </h2>
                 </div>
               </div>
               
@@ -147,16 +180,22 @@ export default function PersonalPage() {
               </div>
 
               <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/10">
-                <p className="text-gray-400 text-sm italic">
-                  Space for sports photos and action shots
-                </p>
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src="/baseball.png"
+                    alt="Baseball action shot"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                  />
+                </div>
               </div>
             </div>
           </motion.section>
         </motion.div>
       </div>
 
-      {/* Core Values */}
+      {/* Core Values 
       <div className="section-container py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -232,9 +271,9 @@ export default function PersonalPage() {
             </p>
           </motion.div>
         </motion.div>
-      </div>
+      </div> */}
 
-      {/* Get In Touch */}
+          {/* Get In Touch */}
       <div className="section-container py-12 pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -244,18 +283,18 @@ export default function PersonalPage() {
           className="glass-card p-12 text-center max-w-3xl mx-auto"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
-            Let&apos;s Connect
+                Let&apos;s Connect
           </h3>
           <p className="text-xl text-gray-300 mb-8">
             Always open to interesting conversations about product, technology, sports, music, or life in general
-          </p>
+              </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:ricky.elder07@gmail.com"
+              <a
+                href="mailto:ricky.elder07@gmail.com"
               className="px-8 py-3 bg-gradient-to-r from-olive-600 to-olive-500 hover:from-olive-700 hover:to-olive-600 text-white font-medium rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Get In Touch
-            </a>
+              >
+                Get In Touch
+              </a>
             <a
               href="https://www.linkedin.com/in/richard-z-elder/"
               target="_blank"
@@ -264,7 +303,7 @@ export default function PersonalPage() {
             >
               Connect on LinkedIn
             </a>
-          </div>
+            </div>
         </motion.div>
       </div>
     </div>

@@ -20,6 +20,7 @@ const staggerContainer = {
   },
 };
 
+
 const frameworks = [
   {
     title: "Customer Empathy",
@@ -45,43 +46,58 @@ const frameworks = [
 
 const products = [
   {
-    name: "FTcase",
-    tagline: "Hydrogen Fueling Device Ensuring Safe, Simple, and Cost Effecting Gaseous Fuel Transfer.",
-    description: "Supported product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for enabling technology adoption in an emerging and dynamic market.",
+    name: "Dental Call Insights",
+    tagline: "Transforming Healthcare Call Recordings into Actionable Insights.",
+    description: "Built an AI-driven analytics platform to support a low-income dental practice in Southern California, increasing call center transparency and patient engagement understanding. Interviewed with the leadership team of the dental firm to define product requirements and features, leveraging AI assisted coding tools to build, host, and deliver the product myself.",
     highlights: [
-      "PM and PMM Experience - Guided cross-functional teams through technical, go-to-market, and product challenges",
+      "Requirements Gathering - Conducted stakeholder interviews with dental practice leadership to define product requirements and features, translating healthcare business needs into technical product specifications",
+      "End-to-End Product Delivery - Leveraged AI-assisted coding tools to build, host, and deliver the analytics platform, combining product management strategy with hands-on technical execution",
+      "Customer-Centric Product Definition - Defined product features focused on increasing call center transparency and patient engagement understanding for a low-income healthcare setting",
+      "AI-Driven Solution Design - Architected and implemented an AI-driven analytics platform to transform call recordings into actionable insights, demonstrating technical product management capabilities",
+    ],
+    tags: ["0 to 1", "Hardware", "Software", "Customer Development", "Launch Strategy"],
+    imageNote: "Space for product photos",
+  },
+  {
+    name: "FTcase",
+    tagline: "Software Driven Hydrogen Fueling Device for Automated Gaseous Fuel Transfer.",
+    description: "Supported product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for enabling technology adoption in an emerging and dynamic market. Worked closely with product engineering, and GTM teams to define and execute along organizational product development process.",
+    highlights: [
+      "PM and PMM Experience - Guided cross-functional teams through prototype, EVT, DVT, PVT development and launch",
       "Product Inception to First Customer - Supported entire product strategy from grant funded prototype to production launch",
       "Product Launch Strategy - Owned the strategy, messaging, and execution for public product launch in Q3 2024",
       "Customer Engagement - Led partnership with Honda Racing Corporation in Pikes Peak International Hill Climb",
     ],
-    tags: ["0 to 1", "Hardware", "Customer Development", "Launch Strategy"],
+    tags: ["0 to 1", "Hardware", "Software", "Customer Development", "Launch Strategy"],
     imageNote: "Space for product photos",
   },
   {
-    name: "Z-class",
-    tagline: "High-Performance Hydrogen Fuel Cell Engine",
-    description: "Developed and commercialized a cutting-edge hydrogen fuel cell engine platform for high-performance applications in the marine and industrial sectors.",
+    name: "H2OS",
+    tagline: "Hydrogen Operating Software - Complete Mission Control for Zero-Emission Assets",
+    description: "Supported design and requirements gathering for a comprehensive operating software platform that provides total control and oversight of covert, zero-emission hydrogen systems across land, sea, and edge applications. While the product was never fully launched to customers, the foundational work established critical product requirements and design principles.",
     highlights: [
-      "Market Research - Identified key market opportunities and customer segments",
-      "Technical Product Management - Translated complex engineering requirements to business value",
-      "Strategic Partnerships - Built relationships with key industry players and early adopters",
+      "Requirements Gathering - cross-functional discovery to define core platform capabilities including predictive diagnostics, maintenance scheduling, and remote operation",
+      "Design Support - Collaborated with product and engineering teams to translate operator needs into system designs for hydrogen production, storage, distribution, and power production",
+      "Interoperability Strategy - Supported plug-and-play integration requirements across ZEI hardware modules to ensure platform extensibility",
     ],
-    tags: ["Hard Tech", "B2B", "Market Entry"],
-    imageNote: "Space for engine specifications and photos",
+    tags: ["Software", "Requirements Gathering", "Design Support", "Platform Strategy"],
+    imageNote: "Space for software interface mockups",
   },
   {
-    name: "Dental Call Insights",
-    tagline: "AI-Powered Call Analytics for Healthcare",
-    description: "Designed and built an AI-driven analytics platform to support a low-income dental practice in Southern California, improving call center performance and patient engagement.",
+    name: "Z-class",
+    tagline: "Stealth-Capable Hydrogen Fuel Cell Power Systems for Vehicle and Remote Applications",
+    description: "Played a critical role in requirements gathering and initial technical prototype development for ZEI's flagship hydrogen fuel cell power platform. Supported product definition for both vehicle propulsion systems and remote power generators, translating complex technical capabilities into clear value propositions for defense, marine, and industrial customers. ",
     highlights: [
-      "Call Transcriptions - Automated transcription pipeline for 100% call coverage",
-      "AI-Driven Insights - Machine learning models for call quality and sentiment analysis",
-      "Performance Summaries - Employee performance dashboards with actionable feedback",
-      "Summative Call Data - Aggregated analytics to identify trends and improvement opportunities",
+      "Requirements Gathering - Conducted deep customer discovery to define critical performance requirements including stealth capabilities, power output, and signature management needs",
+      "Technical Prototype Development - Collaborated closely with engineering teams during initial prototype development, translating customer operational needs into technical specifications and serving as a project manager",
+      "Market Segmentation Strategy - Defined distinct product positioning for vehicle power (tactical operations) versus remote power (forward-operating bases, command outposts) applications",
+      "Cross-Domain Application Design - Defined requirements for multi-domain flexibility across ground vehicles, surface craft, UUVs, and mobile support systems",
+      "System Architecture Definition - Supported definition of hybrid power system architecture combining fuel cells with surge battery technology for burst power and redundancy",
     ],
-    tags: ["AI/ML", "SaaS", "Healthcare", "Analytics"],
-    imageNote: "Space for dashboard screenshots",
+    tags: ["Hard Tech", "Requirements Gathering", "Prototype Development", "B2B", "Defense Tech"],
+    imageNote: "Space for engine specifications and photos",
   },
+
 ];
 
 export default function ProductPage() {
@@ -183,14 +199,14 @@ export default function ProductPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">
                 {framework.title}
-              </h3>
+                </h3>
               <p className="text-gray-300 leading-relaxed">
                 {framework.description}
-              </p>
+                </p>
             </motion.div>
           ))}
         </motion.div>
-      </div>
+              </div>
 
       {/* Notable Products */}
       <div className="section-container py-12 pb-20">
@@ -203,7 +219,6 @@ export default function ProductPage() {
         >
           <h2 className="text-4xl font-bold text-white mb-4">Notable Products</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Products I&apos;ve brought from concept to market
           </p>
         </motion.div>
 
@@ -224,7 +239,7 @@ export default function ProductPage() {
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {product.name}
                 </h3>
-                <p className="text-xl text-blue-400 mb-4">{product.tagline}</p>
+                <p className="text-xl text-olive-400 mb-4">{product.tagline}</p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
                   {product.description}
                 </p>
@@ -233,7 +248,7 @@ export default function ProductPage() {
               <div className="space-y-3 mb-6">
                 {product.highlights.map((highlight, hIndex) => (
                   <div key={hIndex} className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
+                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-olive-500 mt-2" />
                     <p className="text-gray-300">{highlight}</p>
                   </div>
                 ))}
@@ -322,18 +337,177 @@ export default function ProductPage() {
                       </div>
                     </div>
                   </div>
+                ) : product.name === "H2OS" ? (
+                  <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="flex flex-col">
+                        <h4 className="text-xl font-bold text-white mb-3">
+                          Platform Management and Fuel Logistics
+                        </h4>
+                        <div className="relative w-full flex-1 flex items-center justify-center rounded-lg overflow-hidden">
+                          <Image
+                            src="/H2OS.png"
+                            alt="H2OS Software Interface"
+                            width={1200}
+                            height={675}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col">
+                        <h4 className="text-xl font-bold text-white mb-3">
+                          Vessel Controls System Design
+                        </h4>
+                        <div className="relative w-full flex-1 flex items-center justify-center rounded-lg overflow-hidden">
+                          <Image
+                            src="/H2OS boat Ops.png"
+                            alt="H2OS Boat Operations Interface"
+                            width={1200}
+                            height={675}
+                            className="object-contain max-w-full max-h-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : product.name === "Z-class" ? (
+                  <div className="p-4 bg-white/5 rounded-lg border border-white/10">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="md:col-span-1">
+                        <h4 className="text-xl font-bold text-white mb-3">
+                          Z-class Engine
+                        </h4>
+                        <div className="relative w-full h-[400px] rounded-lg overflow-hidden flex items-center justify-center bg-dark-grey/30">
+                          <Image
+                            src="/Z-class boat.jpg"
+                            alt="Z-class Engine"
+                            width={1200}
+                            height={675}
+                            className="object-contain max-h-full max-w-full rounded-lg"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
+                      </div>
+                      <div className="md:col-span-2">
+                        <h4 className="text-xl font-bold text-white mb-3 text-center">
+                          Prototype Vessel
+                        </h4>
+                        <div className="relative w-full h-[400px] rounded-lg overflow-hidden flex items-center justify-center bg-dark-grey/30">
+                          <Image
+                            src="/FCV Vanguard-defense.jpg"
+                            alt="FCV Vanguard Prototype Vessel"
+                            width={1200}
+                            height={675}
+                            className="object-contain max-h-full max-w-full rounded-lg"
+                            sizes="(max-width: 768px) 100vw, 67vw"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : product.name === "Dental Call Insights" ? (
+                  <div className="p-4 bg-white/5 rounded-lg border border-white/10 space-y-6">
+                    {/* DCI Home Page */}
+                    <div className="flex justify-center">
+                      <div className="relative w-3/4 max-w-5xl rounded-lg overflow-hidden">
+                        <Image
+                          src="/DCI home page.png"
+                          alt="DCI Home Page"
+                          width={1200}
+                          height={675}
+                          className="object-contain w-full h-auto"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Call Transcription and AI Insights */}
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-3 text-center">
+                        Call Transcription and AI Insights
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/DCI - Transcribe.png"
+                            alt="DCI Call Transcription Interface"
+                            width={1200}
+                            height={675}
+                            className="object-contain w-full h-full"
+                          />
+                        </div>
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/DCI - Insights.png"
+                            alt="DCI Transcription Details"
+                            width={1200}
+                            height={675}
+                            className="object-contain w-full h-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Data Analytics and Dashboards */}
+                    <div>
+                      <h4 className="text-xl font-bold text-white mb-3 text-center">
+                        Data Analytics and Dashboards
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/DCI Data Insights.png"
+                            alt="DCI Data Analytics Dashboard"
+                            width={1200}
+                            height={675}
+                            className="object-contain w-full h-full"
+                          />
+                        </div>
+                        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                          <Image
+                            src="/DCI Data Insights 2.png"
+                            alt="DCI Data Insights Details"
+                            width={1200}
+                            height={675}
+                            className="object-contain w-full h-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* GitHub Link */}
+                    <div className="pt-4 border-t border-white/10">
+                      <h4 className="text-xl font-bold text-center mb-3">
+                        <a
+                          href="https://github.com/rickyelder07/dentalcallinsights?tab=readme-ov-file"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white hover:text-olive-400 transition-colors underline decoration-white/50 hover:decoration-olive-400 decoration-2 underline-offset-4 inline-flex items-center gap-2"
+                        >
+                          View on GitHub
+                          <svg
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                          </svg>
+                        </a>
+                      </h4>
+                    </div>
+                  </div>
                 ) : (
                   <div className="p-4 bg-white/5 rounded-lg border border-white/10">
                     <p className="text-gray-400 text-sm italic">
                       {product.imageNote}
                     </p>
-                  </div>
+                </div>
                 )}
               </div>
             </motion.div>
           ))}
         </motion.div>
-      </div>
+            </div>
 
       {/* CTA Section */}
       <div className="section-container py-12 pb-20">

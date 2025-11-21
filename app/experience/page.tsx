@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { TargetIcon, MegaphoneIcon, GearIcon, WrenchIcon, CoinIcon, LightningIcon } from "@/components/icons";
+import Image from "next/image";
+import { TargetIcon, MegaphoneIcon, GearIcon, WrenchIcon, CoinIcon } from "@/components/icons";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -64,12 +65,8 @@ export default function ExperiencePage() {
           </h1>
           <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
             My career as an emerging business professional has been defined by growth through 
-            discomfort and a willingness to learn from others with transparent curiosity and 
-            egoless collaboration.
-          </p>
-          <p className="text-xl text-gray-400 leading-relaxed">
-            I pride myself on my selflessness as a leader and my relentless attitude toward 
-            achieving the commitments I make to my team and to myself.
+            discomfort and a willingness to learn from others with curiosity and 
+            egoless collaboration. 
           </p>
         </motion.div>
       </div>
@@ -81,16 +78,29 @@ export default function ExperiencePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto"
+          className="w-full md:w-9/10 mx-auto"
         >
           <div className="glass-card p-8 md:p-12">
             <div className="flex items-start space-x-4 mb-6">
               <div>
-                <LightningIcon className="w-12 h-12" />
+                <Image
+                  src="/ZEI logo white.svg"
+                  alt="Zero Emission Industries Logo"
+                  width={100}
+                  height={100}
+                  className="w-20 h-20"
+                />
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  Zero Emission Industries
+                  <a
+                    href="https://www.zeroei.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-olive-400 transition-colors"
+                  >
+                    Zero Emission Industries
+                  </a>
                 </h2>
                 <p className="text-xl text-olive-400">
                   Hard-tech Hydrogen Product Company
@@ -98,128 +108,123 @@ export default function ExperiencePage() {
               </div>
             </div>
             
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I&apos;ve had the opportunity to help a hydrogen fuel cell technology company grow from 3 to 
-              over 20 employees. Throughout that time I earned significant responsibility as a leader 
+            <p className="text-lg text-gray-300 leading-relaxed mb-12">
+              I&apos;ve had the opportunity to help a hydrogen technology company grow from 3 to 20+ employees. Throughout that time I earned significant responsibility as a leader 
               in multiple cross-functional roles supporting the development of novel products in an 
               emerging market. While working countless long nights and weekends I project managed 
               multiple world firsts, launched a novel hydrogen refueling product, built a marketing 
-              org, was tested creatively, wrote and won <span className="text-olive-400 font-semibold">$7.25M worth of grants</span>, 
+              org, helped run board meetings,  was tested creatively,
               led multiple teams and strategic company initiatives, got my Commercial HazMat License 
               to fuel a race car, and made some friends for life.
             </p>
+
+            {/* Cross-Functional Leadership */}
+            <div className="mb-12">
+              <div className="w-5/5 mx-auto bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Cross-Functional Leadership
+                </h3>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  While at ZEI I led a team or ran point in all of these organizational units and know I can 
+                  effectively communicate and facilitate cross-functionally.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {crossFunctionalAreas.map((area, index) => (
+                    <div
+                      key={index}
+                      className="glass-card p-6 hover:bg-black/40 transition-all"
+                    >
+                      <div className="mb-4">
+                        <area.Icon className="w-12 h-12" />
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-3">
+                        {area.title}
+                      </h4>
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        {area.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Key Achievements */}
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-8">
+                Key Achievements
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Grant Writing & Fundraising</h4>
+                    <p className="text-gray-300">Wrote and won $7.25M in grants to fund R&D and product development</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Product Management</h4>
+                    <p className="text-gray-300">I worked closely with and served as the product manager on the development of 3 customer facing technology products in an emerging market full of headwinds and ambiguity.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Team Building</h4>
+                    <p className="text-gray-300">Helped raise $8.75M Series A. Scaled company from 3 to 20+ employees</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Marketing Organization</h4>
+                    <p className="text-gray-300">Built marketing org from ground up to support product launches and branding</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">World-First Projects</h4>
+                    <p className="text-gray-300">Project managed multiple world-first hydrogen applications including a fuel cell passenger ferry, a fuel cell powerboat, and novel fuel transfer system. </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Hands-On Leadership</h4>
+                    <p className="text-gray-300">Served as a leader within multiple verticals across the organization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Cross-Functional Leadership */}
+      {/* Leadership Callout */}
       <div className="section-container py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Cross-Functional Leadership
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I have led a team or ran point in all of these organizational units and know I can 
-            effectively communicate and facilitate cross-functionally.
-          </p>
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-        >
-          {crossFunctionalAreas.map((area, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className="glass-card p-8 hover:bg-black/40 transition-all"
-            >
-              <div className="mb-4">
-                <area.Icon className="w-12 h-12" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {area.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {area.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Key Achievements Section */}
-      <div className="section-container py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto"
-        >
-          <div className="glass-card p-8 md:p-12">
-            <h3 className="text-3xl font-bold text-white mb-8 text-center">
-              Key Achievements
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Grant Writing & Fundraising</h4>
-                  <p className="text-gray-300">Wrote and won $7.25M in grants to fund R&D and product development</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Product Launch</h4>
-                  <p className="text-gray-300">Successfully launched novel hydrogen refueling product to market</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Team Building</h4>
-                  <p className="text-gray-300">Helped scale company from 3 to 20+ employees</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Marketing Organization</h4>
-                  <p className="text-gray-300">Built marketing org from ground up to support product launches</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">World-First Projects</h4>
-                  <p className="text-gray-300">Project managed multiple world-first hydrogen fuel cell applications</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Hands-On Leadership</h4>
-                  <p className="text-gray-300">Got Commercial HazMat License to support race team operations</p>
-                </div>
-              </div>
-            </div>
+          <div className="bg-olive-500/20 backdrop-blur-sm border border-olive-500/30 rounded-2xl p-6 md:p-8">
+            <p className="text-xl text-gray-300 leading-relaxed font-medium">
+              I pride myself on my selflessness as a leader and my relentless attitude toward 
+              achieving the commitments I make to my team and to myself.
+            </p>
           </div>
         </motion.div>
       </div>
