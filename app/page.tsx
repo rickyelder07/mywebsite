@@ -147,8 +147,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
           >
             I am an analytical thinker who loves to understand corporate strategic decisions and 
-            optimize life through data. Growing up in the Bay Area, I live and breathe tech and am 
-            elated by the prospect  and aim to leverage my skills and experience to transform products 
+            optimize life through data. Growing up in the Bay Area, I live and breathe tech and aim to leverage my skills and experience to transform products 
             that have a global impact. 
           </motion.p>
         </motion.div>

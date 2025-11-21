@@ -164,6 +164,8 @@ export default function PersonalPage() {
                 playing in and watching disc golf tournaments (another surprisingly data-rich sport).
               </p>
 
+          {/* Sports and Data
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
                 <div className="p-4 bg-olive-500/10 rounded-lg border border-olive-500/30">
                   <h4 className="text-xl font-bold text-olive-400 mb-2">NABA</h4>
@@ -178,7 +180,7 @@ export default function PersonalPage() {
                   </p>
                 </div>
               </div>
-
+*/}
               <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/10">
                 <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                   <Image
