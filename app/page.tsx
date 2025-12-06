@@ -99,7 +99,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Product Manager and Professional Business Leader leveraging a unique startup background to connect organizational objectives to product strategy.
+              Product Manager and Professional Business Leader leveraging a novel startup background to connect organizational objectives to product strategy.
             </motion.p>
             
             <motion.div
