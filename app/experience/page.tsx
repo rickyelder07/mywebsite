@@ -50,6 +50,13 @@ const crossFunctionalAreas = [
 
 const featuredProjects = [
   {
+    title: "Executive Leadership",
+    subtitle: "Driving Strategic Decisions Across the Organization",
+    description: "Served in key leadership functions driving critical decisions across finance, operations, engineering, and product verticals. Actively contributed to board meetings and executive leadership discussions, providing strategic insights and organizational alignment. Played an integral role in fundraising efforts and investor relations, helping articulate the company's value proposition and growth trajectory. Participated in crafting the narrative and product vision for future company objectives, translating technical capabilities into market opportunities. This cross-functional leadership role required bridging gaps between technical teams and business strategy, ensuring that operational execution aligned with long-term strategic goals while maintaining organizational agility in a rapidly evolving market.",
+    images: [], // Placeholder for images
+    links: [],
+  },
+  {
     title: "MV Sea Change",
     subtitle: "World's First Hydrogen-Powered Commercial Ferry",
     description: "Played a key role in project managing the final months of build and launch for the MV Sea Change, coordinating with multiple subcontractors and stakeholders to deliver the world's first hydrogen-powered commercial ferry. The vessel now operates in San Francisco Bay, providing zero-emission passenger transportation and demonstrating the viability of hydrogen fuel cell technology in maritime applications.",
