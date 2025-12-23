@@ -215,60 +215,62 @@ export default function ExperiencePage() {
               </div>
             </div>
 
-            {/* Key Achievements */}
+            {/* Roles at ZEI */}
             <div>
               <h3 className="text-3xl font-bold text-white mb-8">
-                Key Achievements
+                Roles & Timeline
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Grant Writing & Fundraising</h4>
-                    <p className="text-gray-300">Wrote and won $7.25M in grants to fund R&D and product development</p>
+              <div className="space-y-8">
+                {/* Director of Marketing */}
+                <div className="relative pl-8 border-l-2 border-olive-400/30">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive-400" />
+                  <div className="mb-2">
+                    <h4 className="text-xl font-bold text-white">Director of Marketing</h4>
+                    <p className="text-olive-400 font-semibold">Sep 2024 - Nov 2025 · 1 yr 3 mos</p>
+                    <p className="text-sm text-gray-400">South San Francisco, CA · On-site</p>
                   </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Built and scaled the company&apos;s marketing function from the ground up, establishing core processes across content development, website design, public relations, product marketing, and social media. Achieved an 81% increase in web traffic, 246% rise in LinkedIn impressions, and 103% boost in webform submissions. Led a company-wide rebrand to support a strategic pivot from renewable energy to defense. Contributed to customer personas, product requirements, and go-to-market strategies for hydrogen technology products. Oversaw the landmark sale to Honda Racing Corporation for the world&apos;s first hydrogen-powered Pikes Peak International Hill Climb and led communications for a world-first hydrogen vessel demonstration.
+                  </p>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Product Management</h4>
-                    <p className="text-gray-300">I worked closely with and served as the product manager on the development of 3 customer facing technology products in an emerging market full of headwinds and ambiguity.
-                    </p>
+
+                {/* Chief of Staff */}
+                <div className="relative pl-8 border-l-2 border-olive-400/30">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive-400" />
+                  <div className="mb-2">
+                    <h4 className="text-xl font-bold text-white">Chief of Staff</h4>
+                    <p className="text-olive-400 font-semibold">Sep 2022 - Sep 2024 · 2 yrs 1 mo</p>
+                    <p className="text-sm text-gray-400">San Francisco, CA</p>
                   </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    As one of the earliest hires, helped scale the organization from its foundational stage, driving strategic initiatives across finance, business development, legal, HR, IT, PR, and marketing. Program managed over $10.5M in grant-funded projects and served as primary point of contact for funding agencies. Co-authored and won a $5.25M grant for a novel mobile liquid hydrogen bunkering system. Led materials creation and relationship-building that contributed to the successful close of an $8.75M Series A round with Chevron New Energies, Trafigura, and Crowley. Coordinated cross-functional leaders, prepared executive-level materials for bi-monthly board meetings, and facilitated company-wide alignment.
+                  </p>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Team Building</h4>
-                    <p className="text-gray-300">Helped raise $8.75M Series A. Scaled company from 3 to 20+ employees</p>
+
+                {/* Junior Manager, Special Projects */}
+                <div className="relative pl-8 border-l-2 border-olive-400/30">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive-400" />
+                  <div className="mb-2">
+                    <h4 className="text-xl font-bold text-white">Junior Manager, Special Projects</h4>
+                    <p className="text-olive-400 font-semibold">Aug 2020 - Sep 2022 · 2 yrs 2 mos</p>
                   </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Led high-impact, cross-functional initiatives that advanced both internal foundation and external presence. Managed a full-scale company rebrand, overseeing visual identity, messaging, website rebuilds, backend systems, and operational improvements. Coordinated key stakeholders during the critical final months of the Sea Change vessel construction. Co-authored and secured a $2M grant to support the development of a world&apos;s first hydrogen fuel cell harbor craft demonstration and supporting mobile fueling infrastructure, then helped project manage its execution.
+                  </p>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Marketing Organization</h4>
-                    <p className="text-gray-300">Built marketing org from ground up to support product launches and branding</p>
+
+                {/* Marketing Intern */}
+                <div className="relative pl-8 border-l-2 border-olive-400/30">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive-400" />
+                  <div className="mb-2">
+                    <h4 className="text-xl font-bold text-white">Marketing & Business Development Intern</h4>
+                    <p className="text-olive-400 font-semibold">Jun 2019 - Aug 2019 · 3 mos</p>
+                    <p className="text-sm text-gray-400">Golden Gate Zero Emission Marine · Alameda, CA</p>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">World-First Projects</h4>
-                    <p className="text-gray-300">Project managed multiple world-first hydrogen applications including a fuel cell passenger ferry, a fuel cell powerboat, and novel fuel transfer system. </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-2 h-2 rounded-full bg-olive-400 mt-2" />
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Hands-On Leadership</h4>
-                    <p className="text-gray-300">Served as a leader within multiple verticals across the organization</p>
-                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    Quickly promoted to managing external creative resources for VP of Marketing. Supported marketing campaigns to promote brand image and public perception of hydrogen. Managed office relocation through budgeting of over $160,000 and ensured facilities met business and legal requirements. Worked with CEO to improve business operations systems and assisted VP of Business Development in partner meetings and materials creation.
+                  </p>
                 </div>
               </div>
             </div>
