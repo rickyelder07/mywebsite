@@ -393,9 +393,10 @@ export default function ExperiencePage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Technical Proficiency
-          </h2>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-10">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Technical Proficiency
+            </h2>
 
           {/* Software/Data */}
           <div className="mb-6">
@@ -490,6 +491,7 @@ export default function ExperiencePage() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </motion.div>
       </div>
