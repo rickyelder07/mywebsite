@@ -384,6 +384,122 @@ export default function ExperiencePage() {
         </motion.div>
       </div>
 
+      {/* Tool Proficiency Section */}
+      <div className="section-container py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            Technical Proficiency
+          </h2>
+
+          {/* Software/Data */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+              Software & Data
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+              {[
+                { name: "Python", logo: "/logos/python.svg" },
+                { name: "SQL", logo: "/logos/sql.svg" },
+                { name: "R Studio", logo: "/logos/rstudio.svg" },
+                { name: "JavaScript", logo: "/logos/javascript.svg" },
+                { name: "TypeScript", logo: "/logos/typescript.svg" },
+                { name: "HTML", logo: "/logos/html.svg" },
+                { name: "CSS", logo: "/logos/css.svg" },
+                { name: "Cursor", logo: "/logos/cursor.svg" },
+                { name: "Claude", logo: "/logos/claude.svg" },
+                { name: "Vercel", logo: "/logos/vercel.svg" },
+                { name: "Supabase", logo: "/logos/supabase.svg" },
+              ].map((tool) => (
+                <div key={tool.name} className="flex flex-col items-center group">
+                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
+                    <Image
+                      src={tool.logo}
+                      alt={tool.name}
+                      width={48}
+                      height={48}
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Design/Marketing */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+              Design & Marketing
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+              {[
+                { name: "Photoshop", logo: "/logos/photoshop.svg" },
+                { name: "Illustrator", logo: "/logos/illustrator.svg" },
+                { name: "Premiere Pro", logo: "/logos/premiere.svg" },
+                { name: "After Effects", logo: "/logos/aftereffects.svg" },
+                { name: "Canva", logo: "/logos/canva.svg" },
+                { name: "Figma", logo: "/logos/figma.svg" },
+                { name: "Excel", logo: "/logos/excel.svg" },
+                { name: "PowerPoint", logo: "/logos/powerpoint.svg" },
+                { name: "Sheets", logo: "/logos/sheets.svg" },
+                { name: "Slides", logo: "/logos/slides.svg" },
+                { name: "Salesforce", logo: "/logos/salesforce.svg" },
+                { name: "Webflow", logo: "/logos/webflow.svg" },
+              ].map((tool) => (
+                <div key={tool.name} className="flex flex-col items-center group">
+                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
+                    <Image
+                      src={tool.logo}
+                      alt={tool.name}
+                      width={48}
+                      height={48}
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Operations/Project Management */}
+          <div>
+            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+              Operations & Project Management
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+              {[
+                { name: "Asana", logo: "/logos/asana.svg" },
+                { name: "Monday.com", logo: "/logos/monday.svg" },
+                { name: "Smartsheet", logo: "/logos/smartsheet.svg" },
+                { name: "QuickBooks", logo: "/logos/quickbooks.svg" },
+                { name: "Rippling", logo: "/logos/rippling.svg" },
+                { name: "Gusto", logo: "/logos/gusto.svg" },
+              ].map((tool) => (
+                <div key={tool.name} className="flex flex-col items-center group">
+                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
+                    <Image
+                      src={tool.logo}
+                      alt={tool.name}
+                      width={48}
+                      height={48}
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       {/* CTA Section */}
       <div className="section-container py-12 pb-20">
         <motion.div
