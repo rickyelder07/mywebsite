@@ -393,16 +393,16 @@ export default function ExperiencePage() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
             Technical Proficiency
           </h2>
 
           {/* Software/Data */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-olive-400 mb-3">
               Software & Data
             </h3>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+            <div className="flex flex-wrap gap-3">
               {[
                 { name: "Python", logo: "/logos/python.svg" },
                 { name: "SQL", logo: "/logos/sql.svg" },
@@ -416,28 +416,26 @@ export default function ExperiencePage() {
                 { name: "Vercel", logo: "/logos/vercel.svg" },
                 { name: "Supabase", logo: "/logos/supabase.svg" },
               ].map((tool) => (
-                <div key={tool.name} className="flex flex-col items-center group">
-                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
-                    <Image
-                      src={tool.logo}
-                      alt={tool.name}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                  <Image
+                    src={tool.logo}
+                    alt={tool.name}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
+                  <span className="text-sm text-gray-300">{tool.name}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Design/Marketing */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+          <div className="mb-6">
+            <h3 className="text-lg font-bold text-olive-400 mb-3">
               Design & Marketing
             </h3>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+            <div className="flex flex-wrap gap-3">
               {[
                 { name: "Photoshop", logo: "/logos/photoshop.svg" },
                 { name: "Illustrator", logo: "/logos/illustrator.svg" },
@@ -452,17 +450,15 @@ export default function ExperiencePage() {
                 { name: "Salesforce", logo: "/logos/salesforce.svg" },
                 { name: "Webflow", logo: "/logos/webflow.svg" },
               ].map((tool) => (
-                <div key={tool.name} className="flex flex-col items-center group">
-                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
-                    <Image
-                      src={tool.logo}
-                      alt={tool.name}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                  <Image
+                    src={tool.logo}
+                    alt={tool.name}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
+                  <span className="text-sm text-gray-300">{tool.name}</span>
                 </div>
               ))}
             </div>
@@ -470,10 +466,10 @@ export default function ExperiencePage() {
 
           {/* Operations/Project Management */}
           <div>
-            <h3 className="text-2xl font-bold text-olive-400 mb-6">
+            <h3 className="text-lg font-bold text-olive-400 mb-3">
               Operations & Project Management
             </h3>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-8">
+            <div className="flex flex-wrap gap-3">
               {[
                 { name: "Asana", logo: "/logos/asana.svg" },
                 { name: "Monday.com", logo: "/logos/monday.svg" },
@@ -482,17 +478,15 @@ export default function ExperiencePage() {
                 { name: "Rippling", logo: "/logos/rippling.svg" },
                 { name: "Gusto", logo: "/logos/gusto.svg" },
               ].map((tool) => (
-                <div key={tool.name} className="flex flex-col items-center group">
-                  <div className="w-16 h-16 flex items-center justify-center mb-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-all p-2">
-                    <Image
-                      src={tool.logo}
-                      alt={tool.name}
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-300 text-center">{tool.name}</span>
+                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
+                  <Image
+                    src={tool.logo}
+                    alt={tool.name}
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
+                  <span className="text-sm text-gray-300">{tool.name}</span>
                 </div>
               ))}
             </div>
