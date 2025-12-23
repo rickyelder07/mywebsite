@@ -448,7 +448,6 @@ export default function ExperiencePage() {
                 { name: "PowerPoint", logo: "/logos/powerpoint.svg" },
                 { name: "Sheets", logo: "/logos/sheets.svg" },
                 { name: "Slides", logo: "/logos/slides.svg" },
-                { name: "Salesforce", logo: "/logos/salesforce.svg" },
                 { name: "Webflow", logo: "/logos/webflow.svg" },
               ].map((tool) => (
                 <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
@@ -472,6 +471,7 @@ export default function ExperiencePage() {
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
+                { name: "Salesforce", logo: "/logos/salesforce.svg" },
                 { name: "Asana", logo: "/logos/asana.svg" },
                 { name: "Monday.com", logo: "/logos/monday.svg" },
                 { name: "Smartsheet", logo: "/logos/smartsheet.svg" },

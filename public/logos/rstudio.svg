@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#75AADB" rx="28"/>
-  <ellipse cx="128" cy="128" rx="80" ry="80" fill="none" stroke="#FFF" stroke-width="12"/>
-  <path fill="#FFF" d="M95 105h-20c-4 0-7 3-7 7v40c0 4 3 7 7 7h15c15 0 27-12 27-27s-12-27-27-27zm0 44H85v-34h10c9 0 17 8 17 17s-8 17-17 17z"/>
-  <path fill="#FFF" d="M170 105h-25v10h25c5 0 9 4 9 9s-4 9-9 9h-16v-13h-10v38h10v-15h16c11 0 20-9 20-20s-9-18-20-18z"/>
+  <defs>
+    <linearGradient id="r-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#75AADB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90C8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#r-gradient)" rx="28"/>
+  <ellipse cx="128" cy="128" rx="90" ry="90" fill="none" stroke="#FFF" stroke-width="8"/>
+  <path fill="#FFF" d="M100 100h-18c-6 0-11 5-11 11v45c0 6 5 11 11 11h22c20 0 36-16 36-36s-16-31-36-31c-2 0-3 0-4 0zm0 52H88v-40h12c14 0 24 10 24 24s-10 16-24 16z"/>
+  <path fill="#FFF" d="M185 100h-32v12h32c8 0 14 6 14 14s-6 14-14 14h-20v-16h-12v48h12v-20h20c16 0 28-12 28-28s-12-24-28-24z"/>
 </svg>
