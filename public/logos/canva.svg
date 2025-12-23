@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#00C4CC" rx="28"/>
-  <path fill="#FFF" d="M128 40c-48.6 0-88 39.4-88 88s39.4 88 88 88 88-39.4 88-88-39.4-88-88-88zm35.7 115.3c-8.3 8.3-21.8 8.3-30.1 0L105.5 127c-8.3-8.3-8.3-21.8 0-30.1s21.8-8.3 30.1 0l28.1 28.3c8.3 8.3 8.3 21.8 0 30.1z"/>
+  <defs>
+    <linearGradient id="canva-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C4CC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7D2AE7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00C4CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#canva-gradient)" rx="28"/>
+  <path fill="#FFF" d="M128 60c-37.6 0-68 30.4-68 68s30.4 68 68 68 68-30.4 68-68-30.4-68-68-68zm28 93c-8 8-21 8-29 0-8-8-8-21 0-29l18-18c8-8 21-8 29 0s8 21 0 29l-18 18z"/>
 </svg>
-

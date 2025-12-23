@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#3ECF8E" rx="28"/>
-  <path fill="#FFF" d="M160 50H96c-8.8 0-16 7.2-16 16v124c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16V66c0-8.8-7.2-16-16-16zm-64 16h64v60H96V66zm0 76h64v48H96v-48z"/>
+  <defs>
+    <linearGradient id="supabase-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ECF8E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3ECF8E;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="#1E1E1E" rx="28"/>
+  <path fill="url(#supabase-gradient)" d="M149 200c-3 5-10 5-13 1L79 118c-4-6 1-14 8-14h70c5 0 8 5 6 10l-14 86z"/>
+  <path fill="#3ECF8E" opacity="0.7" d="M107 56c3-5 10-5 13-1l57 83c4 6-1 14-8 14h-70c-5 0-8-5-6-10l14-86z"/>
 </svg>
-
