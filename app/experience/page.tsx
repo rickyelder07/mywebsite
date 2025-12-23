@@ -48,6 +48,71 @@ const crossFunctionalAreas = [
   },
 ];
 
+const featuredProjects = [
+  {
+    title: "MV Sea Change",
+    subtitle: "World's First Hydrogen-Powered Commercial Ferry",
+    description: "Played a key role in project managing the final months of build and launch for the MV Sea Change, coordinating with multiple subcontractors and stakeholders to deliver the world's first hydrogen-powered commercial ferry. The vessel now operates in San Francisco Bay, providing zero-emission passenger transportation and demonstrating the viability of hydrogen fuel cell technology in maritime applications.",
+    images: [], // Placeholder for images
+    links: [],
+  },
+  {
+    title: "FTcase Product Launch",
+    subtitle: "Pioneering Portable Hydrogen Fueling Solution",
+    description: "Led the comprehensive product launch of FTcase, ZEI's revolutionary portable hydrogen fueling system. Participated in product roadmapping and engineering support while owning the marketing and communications strategy. Drove press release coordination for this historic launch, facilitating media engagements and leadership interviews. Developed critical product collateral including spec sheets and sales presentations that translated complex hydrogen thermodynamics and safety regulations into clear value propositions for target markets. The narrative development process focused on distilling technical complexity into compelling customer benefits, directly supporting equipment sales and market adoption.",
+    images: [], // Placeholder for images
+    links: [
+      {
+        text: "FTcase Spec Sheet",
+        url: "https://cdn.prod.website-files.com/66ebc0f724eaabe44e4c285a/68487a940e96fb3cc5264551_FTcase%20Spec%20Sheet%206-3-25.pdf"
+      },
+      {
+        text: "Autoline Network Interview",
+        url: "https://www.youtube.com/watch?v=Kmka7Q_U5mQ"
+      }
+    ],
+  },
+  {
+    title: "Grant Program Management",
+    subtitle: "Overseeing $10.5M in California Energy Commission Funding",
+    description: "Managed the relationship and deliverables for $10.5M in California Energy Commission grant-funded projects. Ran critical project review meetings, communicated project milestones, and coordinated internal resource planning including equipment, headcount, and timelines. These efforts culminated in the successful launch of the FCV Vanguard (originally the Small Fast Harbor Craft Project), a hydrogen prototype vessel featuring novel hydrogen storage and mobile fuel transfer technology. The project included a 6-month demonstration period and a high-profile public launch event as part of a16z Tech Week, showcasing the future of zero-emission maritime technology.",
+    images: [], // Placeholder for images
+    links: [
+      {
+        text: "Forbes: Hydrogen Power for Boats",
+        url: "https://www.forbes.com/sites/billkoenig/2024/10/03/company-announces-an-attempt-to-bring-hydrogen-power-to-boats/"
+      },
+      {
+        text: "CEC Final Report",
+        url: "https://www.energy.ca.gov/sites/default/files/2025-06/CEC-500-2025-034.pdf"
+      }
+    ],
+  },
+  {
+    title: "Honda Racing Corporation Partnership",
+    subtitle: "World-First Hydrogen Fuel Cell Vehicle at Pikes Peak",
+    description: "Led the entire cross-functional effort for ZEI's partnership with Honda Racing Corporation for a historic world-first attempt at the Pikes Peak International Hill Climb with a hydrogen fuel cell vehicle. Managed the complete project lifecycle from initial product sale and delivery through race execution and media coverage. Coordinated complex logistics including fuel enablement with FTcase and mobile hydrogen supply, facilitated fueling support during race trials and race day, and managed PR relationships for multiple press releases. The partnership garnered international media coverage and demonstrated hydrogen technology's viability in high-performance motorsports applications.",
+    images: [], // Placeholder for images
+    links: [
+      {
+        text: "Pikes Peak Recap Video",
+        url: "https://www.youtube.com/watch?v=Bxvdn-wEgrw"
+      },
+      {
+        text: "Autoweek Coverage",
+        url: "https://www.autoweek.com/news/a65047245/honda-fuel-cell-cr-v-at-pikes-peak/"
+      }
+    ],
+  },
+  {
+    title: "Brand Evolution & Strategy",
+    subtitle: "Building ZEI's Identity from Golden Gate Zero Emission Marine to Defense-Focused Leader",
+    description: "Spearheaded ZEI's complete brand evolution across multiple iterations, from the original Golden Gate Zero Emission Marine identity to Zero Emission Industries, and ultimately to a defense-focused brand strategy. Developed comprehensive brand strategy, led website redesigns, built social media presence, created logo systems, and produced all sales collateral and marketing materials. The brand transformations successfully repositioned the company for different market opportunities while maintaining cohesive visual identity and messaging that resonated with evolving target audiences.",
+    images: [], // Placeholder for images
+    links: [],
+  },
+];
+
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen">
@@ -205,6 +270,87 @@ export default function ExperiencePage() {
                     <p className="text-gray-300">Served as a leader within multiple verticals across the organization</p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Featured Projects */}
+            <div className="mt-16">
+              <h3 className="text-3xl font-bold text-white mb-8">
+                Featured Projects & Initiatives
+              </h3>
+              
+              <div className="space-y-10">
+                {featuredProjects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10 hover:bg-white/8 transition-all"
+                  >
+                    {/* Project Header */}
+                    <div className="mb-6">
+                      <h4 className="text-2xl font-bold text-white mb-2">
+                        {project.title}
+                      </h4>
+                      <p className="text-lg text-olive-400 font-semibold mb-4">
+                        {project.subtitle}
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    {/* Image Placeholder Section */}
+                    {project.images.length > 0 && (
+                      <div className="my-8 bg-white/5 rounded-lg border border-white/10 p-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {project.images.map((img, imgIndex) => (
+                            <div key={imgIndex} className="relative w-full h-64 rounded-lg overflow-hidden">
+                              <Image
+                                src={img}
+                                alt={`${project.title} image ${imgIndex + 1}`}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Links Section */}
+                    {project.links.length > 0 && (
+                      <div className="flex flex-wrap gap-4 mt-6">
+                        {project.links.map((link, linkIndex) => (
+                          <a
+                            key={linkIndex}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                          >
+                            {link.text}
+                            <svg
+                              className="w-4 h-4"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                              />
+                            </svg>
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
