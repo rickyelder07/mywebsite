@@ -50,13 +50,6 @@ const crossFunctionalAreas = [
 
 const featuredProjects = [
   {
-    title: "Executive Leadership",
-    subtitle: "Driving Strategic Decisions Across the Organization",
-    description: "Served in key leadership functions driving critical decisions across finance, operations, engineering, and product verticals. Actively contributed to board meetings and executive leadership discussions, providing strategic insights and organizational alignment. Played an integral role in fundraising efforts and investor relations, helping articulate the company's value proposition and growth trajectory. Participated in crafting the narrative and product vision for future company objectives, translating technical capabilities into market opportunities. This cross-functional leadership role required bridging gaps between technical teams and business strategy, ensuring that operational execution aligned with long-term strategic goals while maintaining organizational agility in a rapidly evolving market.",
-    images: [], // Placeholder for images
-    links: [],
-  },
-  {
     title: "MV Sea Change",
     subtitle: "World's First Hydrogen-Powered Commercial Ferry",
     description: "Played a key role in project managing the final months of build and launch for the MV Sea Change, coordinating with multiple subcontractors and stakeholders to deliver the world's first hydrogen-powered commercial ferry. The vessel now operates in San Francisco Bay, providing zero-emission passenger transportation and demonstrating the viability of hydrogen fuel cell technology in maritime applications.",
@@ -115,6 +108,13 @@ const featuredProjects = [
     title: "Brand Evolution & Strategy",
     subtitle: "Building ZEI's Identity from Golden Gate Zero Emission Marine to Defense-Focused Leader",
     description: "Spearheaded ZEI's complete brand evolution across multiple iterations, from the original Golden Gate Zero Emission Marine identity to Zero Emission Industries, and ultimately to a defense-focused brand strategy. Developed comprehensive brand strategy, led website redesigns, built social media presence, created logo systems, and produced all sales collateral and marketing materials. The brand transformations successfully repositioned the company for different market opportunities while maintaining cohesive visual identity and messaging that resonated with evolving target audiences.",
+    images: [], // Placeholder for images
+    links: [],
+  },
+  {
+    title: "Executive Leadership",
+    subtitle: "Driving Strategic Decisions Across the Organization",
+    description: "Served in key leadership functions driving critical decisions across finance, operations, engineering, and product verticals. Actively contributed to board meetings and executive leadership discussions, providing strategic insights and organizational alignment. Played an integral role in fundraising efforts and investor relations, including contributing to the successful close of an $8.75M Series A round with Chevron New Energies, Trafigura, and Crowley. Led the creation of investor materials and helped articulate the company's value proposition and growth trajectory to secure funding. Participated in crafting the narrative and product vision for future company objectives, translating technical capabilities into market opportunities. This cross-functional leadership role required bridging gaps between technical teams and business strategy, ensuring that operational execution aligned with long-term strategic goals while maintaining organizational agility in a rapidly evolving market.",
     images: [], // Placeholder for images
     links: [],
   },
