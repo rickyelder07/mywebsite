@@ -191,7 +191,7 @@ export default function ExperiencePage() {
             </p>
 
             {/* Cross-Functional Leadership */}
-            <div className="mb-12">
+            <div id="cross-functional-leadership" className="mb-12 scroll-mt-24">
               <div className="w-5/5 mx-auto bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Cross-Functional Leadership
@@ -400,96 +400,110 @@ export default function ExperiencePage() {
             </h2>
 
           {/* Software/Data */}
-          <div className="mb-6">
-            <h3 className="text-lg font-bold text-olive-400 mb-3">
+          <div className="mb-6 p-6 rounded-xl bg-blue-500/10 border border-blue-500/20">
+            <h3 className="text-lg font-bold text-blue-400 mb-4">
               Software & Data
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                { name: "Python", logo: "/logos/python.svg" },
-                { name: "SQL", logo: "/logos/sql.svg" },
-                { name: "R Studio", logo: "/logos/rstudio.svg" },
-                { name: "JavaScript", logo: "/logos/javascript.svg" },
-                { name: "TypeScript", logo: "/logos/typescript.svg" },
-                { name: "HTML", logo: "/logos/html.svg" },
-                { name: "CSS", logo: "/logos/css.svg" },
-                { name: "Cursor", logo: "/logos/cursor.svg" },
-                { name: "Claude", logo: "/logos/claude.svg" },
-                { name: "Vercel", logo: "/logos/vercel.svg" },
-                { name: "Supabase", logo: "/logos/supabase.svg" },
+                { name: "Python", url: "https://www.python.org/" },
+                { name: "SQL", url: "https://www.mysql.com/" },
+                { name: "R Studio", url: "https://posit.co/products/open-source/rstudio/" },
+                { name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+                { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+                { name: "HTML", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+                { name: "CSS", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+                { name: "Cursor", url: "https://www.cursor.com/" },
+                { name: "Claude", url: "https://www.anthropic.com/claude" },
+                { name: "Vercel", url: "https://vercel.com/" },
+                { name: "Supabase", url: "https://supabase.com/" },
               ].map((tool) => (
-                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
-                  <Image
-                    src={tool.logo}
-                    alt={tool.name}
-                    width={20}
-                    height={20}
-                    className="object-contain"
-                  />
-                  <span className="text-sm text-gray-300">{tool.name}</span>
-                </div>
+                <a
+                  key={tool.name}
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-400/30 hover:border-blue-400/50 rounded-lg transition-all text-sm text-blue-100 hover:text-white font-medium"
+                >
+                  {!['JavaScript', 'HTML', 'CSS'].includes(tool.name) && (
+                    <img
+                      src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
+                      alt={`${tool.name} icon`}
+                      className="w-4 h-4"
+                    />
+                  )}
+                  {tool.name}
+                </a>
               ))}
             </div>
           </div>
 
           {/* Design/Marketing */}
-          <div className="mb-6">
-            <h3 className="text-lg font-bold text-olive-400 mb-3">
+          <div className="mb-6 p-6 rounded-xl bg-purple-500/10 border border-purple-500/20">
+            <h3 className="text-lg font-bold text-purple-400 mb-4">
               Design & Marketing
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                { name: "Photoshop", logo: "/logos/photoshop.svg" },
-                { name: "Illustrator", logo: "/logos/illustrator.svg" },
-                { name: "Premiere Pro", logo: "/logos/premiere.svg" },
-                { name: "After Effects", logo: "/logos/aftereffects.svg" },
-                { name: "Canva", logo: "/logos/canva.svg" },
-                { name: "Figma", logo: "/logos/figma.svg" },
-                { name: "Excel", logo: "/logos/excel.svg" },
-                { name: "PowerPoint", logo: "/logos/powerpoint.svg" },
-                { name: "Sheets", logo: "/logos/sheets.svg" },
-                { name: "Slides", logo: "/logos/slides.svg" },
-                { name: "Webflow", logo: "/logos/webflow.svg" },
+                { name: "Photoshop", url: "https://www.adobe.com/products/photoshop.html" },
+                { name: "Illustrator", url: "https://www.adobe.com/products/illustrator.html" },
+                { name: "Premiere Pro", url: "https://www.adobe.com/products/premiere.html" },
+                { name: "After Effects", url: "https://www.adobe.com/products/aftereffects.html" },
+                { name: "Canva", url: "https://www.canva.com/" },
+                { name: "Figma", url: "https://www.figma.com/" },
+                { name: "Excel", url: "https://www.microsoft.com/en-us/microsoft-365/excel" },
+                { name: "PowerPoint", url: "https://www.microsoft.com/en-us/microsoft-365/powerpoint" },
+                { name: "Sheets", url: "https://www.google.com/sheets/about/" },
+                { name: "Slides", url: "https://www.google.com/slides/about/" },
+                { name: "Webflow", url: "https://webflow.com/" },
               ].map((tool) => (
-                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
-                  <Image
-                    src={tool.logo}
-                    alt={tool.name}
-                    width={20}
-                    height={20}
-                    className="object-contain"
+                <a
+                  key={tool.name}
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/30 hover:border-purple-400/50 rounded-lg transition-all text-sm text-purple-100 hover:text-white font-medium"
+                >
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
+                    alt={`${tool.name} icon`}
+                    className="w-4 h-4"
                   />
-                  <span className="text-sm text-gray-300">{tool.name}</span>
-                </div>
+                  {tool.name}
+                </a>
               ))}
             </div>
           </div>
 
           {/* Operations/Project Management */}
-          <div>
-            <h3 className="text-lg font-bold text-olive-400 mb-3">
+          <div className="p-6 rounded-xl bg-green-500/10 border border-green-500/20">
+            <h3 className="text-lg font-bold text-green-400 mb-4">
               Operations & Project Management
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                { name: "Salesforce", logo: "/logos/salesforce.svg" },
-                { name: "Asana", logo: "/logos/asana.svg" },
-                { name: "Monday.com", logo: "/logos/monday.svg" },
-                { name: "Smartsheet", logo: "/logos/smartsheet.svg" },
-                { name: "QuickBooks", logo: "/logos/quickbooks.svg" },
-                { name: "Rippling", logo: "/logos/rippling.svg" },
-                { name: "Gusto", logo: "/logos/gusto.svg" },
+                { name: "Salesforce", url: "https://www.salesforce.com/" },
+                { name: "Asana", url: "https://asana.com/" },
+                { name: "Monday.com", url: "https://monday.com/" },
+                { name: "Smartsheet", url: "https://www.smartsheet.com/" },
+                { name: "QuickBooks", url: "https://quickbooks.intuit.com/" },
+                { name: "Rippling", url: "https://www.rippling.com/" },
+                { name: "Gusto", url: "https://gusto.com/" },
               ].map((tool) => (
-                <div key={tool.name} className="flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg transition-all">
-                  <Image
-                    src={tool.logo}
-                    alt={tool.name}
-                    width={20}
-                    height={20}
-                    className="object-contain"
+                <a
+                  key={tool.name}
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 border border-green-400/30 hover:border-green-400/50 rounded-lg transition-all text-sm text-green-100 hover:text-white font-medium"
+                >
+                  <img
+                    src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
+                    alt={`${tool.name} icon`}
+                    className="w-4 h-4"
                   />
-                  <span className="text-sm text-gray-300">{tool.name}</span>
-                </div>
+                  {tool.name}
+                </a>
               ))}
             </div>
           </div>

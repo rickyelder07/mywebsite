@@ -232,8 +232,9 @@ export default function ProductPage() {
           {products.map((product, index) => (
             <motion.div
               key={index}
+              id={product.name.toLowerCase().replace(/\s+/g, '-')}
               variants={fadeInUp}
-              className="glass-card p-8 md:p-10 hover:bg-black/40 transition-all"
+              className="glass-card p-8 md:p-10 hover:bg-black/40 transition-all scroll-mt-24"
             >
               <div className="mb-6">
                 <h3 className="text-3xl font-bold text-white mb-2">
