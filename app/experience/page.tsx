@@ -53,14 +53,14 @@ const featuredProjects = [
     title: "MV Sea Change",
     subtitle: "World's First Hydrogen-Powered Commercial Ferry",
     description: "Played a key role in project managing the final months of build and launch for the MV Sea Change, coordinating with multiple subcontractors and stakeholders to deliver the world's first hydrogen-powered commercial ferry. The vessel now operates in San Francisco Bay, providing zero-emission passenger transportation and demonstrating the viability of hydrogen fuel cell technology in maritime applications.",
-    images: [], // Placeholder for images
+    images: ["/Sea Change.jpg"],
     links: [],
   },
   {
     title: "FTcase Product Launch",
     subtitle: "Pioneering Portable Hydrogen Fueling Solution",
     description: "Led the comprehensive product launch of FTcase, ZEI's revolutionary portable hydrogen fueling system. Participated in product roadmapping and engineering support while owning the marketing and communications strategy. Drove press release coordination for this historic launch, facilitating media engagements and leadership interviews. Developed critical product collateral including spec sheets and sales presentations that translated complex hydrogen thermodynamics and safety regulations into clear value propositions for target markets. The narrative development process focused on distilling technical complexity into compelling customer benefits, directly supporting equipment sales and market adoption.",
-    images: [], // Placeholder for images
+    images: ["/FTcase.jpg"],
     links: [
       {
         text: "FTcase Spec Sheet",
@@ -76,7 +76,7 @@ const featuredProjects = [
     title: "Grant Program Management",
     subtitle: "Overseeing $10.5M in California Energy Commission Funding",
     description: "Managed the relationship and deliverables for $10.5M in California Energy Commission grant-funded projects. Ran critical project review meetings, communicated project milestones, and coordinated internal resource planning including equipment, headcount, and timelines. These efforts culminated in the successful launch of the FCV Vanguard (originally the Small Fast Harbor Craft Project), a hydrogen prototype vessel featuring novel hydrogen storage and mobile fuel transfer technology. The project included a 6-month demonstration period and a high-profile public launch event as part of a16z Tech Week, showcasing the future of zero-emission maritime technology.",
-    images: [], // Placeholder for images
+    images: ["/FCV Vanguard.jpg"],
     links: [
       {
         text: "Forbes: Hydrogen Power for Boats",
@@ -92,7 +92,7 @@ const featuredProjects = [
     title: "Honda Racing Corporation Partnership",
     subtitle: "World-First Hydrogen Fuel Cell Vehicle at Pikes Peak",
     description: "Led the entire cross-functional effort for ZEI's partnership with Honda Racing Corporation for a historic world-first attempt at the Pikes Peak International Hill Climb with a hydrogen fuel cell vehicle. Managed the complete project lifecycle from initial product sale and delivery through race execution and media coverage. Coordinated complex logistics including fuel enablement with FTcase and mobile hydrogen supply, facilitated fueling support during race trials and race day, and managed PR relationships for multiple press releases. The partnership garnered international media coverage and demonstrated hydrogen technology's viability in high-performance motorsports applications.",
-    images: [], // Placeholder for images
+    images: ["/HRC Team.jpg"],
     links: [
       {
         text: "Pikes Peak Recap Video",
@@ -311,17 +311,18 @@ export default function ExperiencePage() {
                       </p>
                     </div>
 
-                    {/* Image Placeholder Section */}
+                    {/* Image Section */}
                     {project.images.length > 0 && (
-                      <div className="my-8 bg-white/5 rounded-lg border border-white/10 p-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="my-8">
+                        <div className="grid grid-cols-1 gap-6">
                           {project.images.map((img, imgIndex) => (
-                            <div key={imgIndex} className="relative w-full h-64 rounded-lg overflow-hidden">
+                            <div key={imgIndex} className="relative w-full aspect-video rounded-lg overflow-hidden bg-white/5 border border-white/10">
                               <Image
                                 src={img}
-                                alt={`${project.title} image ${imgIndex + 1}`}
+                                alt={`${project.title}`}
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1000px"
                               />
                             </div>
                           ))}
