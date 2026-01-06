@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -121,6 +122,8 @@ const featuredProjects = [
 ];
 
 export default function ExperiencePage() {
+  const [isFeaturedProjectsOpen, setIsFeaturedProjectsOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -284,11 +287,27 @@ export default function ExperiencePage() {
 
             {/* Featured Projects */}
             <div className="mt-16">
-              <h3 className="text-3xl font-bold text-white mb-8">
-                Featured Projects & Initiatives
-              </h3>
-              
-              <div className="space-y-10">
+              <button
+                onClick={() => setIsFeaturedProjectsOpen(!isFeaturedProjectsOpen)}
+                className="w-full flex items-center justify-between text-left mb-8 group"
+              >
+                <h3 className="text-3xl font-bold text-white group-hover:text-olive-400 transition-colors">
+                  Featured Projects & Initiatives
+                </h3>
+                <svg
+                  className={`w-8 h-8 text-white group-hover:text-olive-400 transition-all ${
+                    isFeaturedProjectsOpen ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isFeaturedProjectsOpen && (
+                <div className="space-y-10">
                 {featuredProjects.map((project, index) => (
                   <motion.div
                     key={index}
@@ -362,6 +381,208 @@ export default function ExperiencePage() {
                   </motion.div>
                 ))}
               </div>
+              )}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Professional Development Section */}
+      <div className="section-container py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="w-full md:w-9/10 mx-auto"
+        >
+          <div className="glass-card p-8 md:p-12">
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                Professional Development & Applied Engineering Projects
+              </h2>
+              <p className="text-xl text-olive-400">
+                Aug 2024 - Present
+              </p>
+            </div>
+
+            <p className="text-lg text-gray-300 leading-relaxed mb-12">
+              Pursuing hands-on product development and engineering projects to deepen technical skills
+              while applying product management principles. Building full-stack applications from concept
+              to deployment, gaining proficiency in AI/ML integration, mobile development, and cloud infrastructure.
+            </p>
+
+            {/* Projects */}
+            <div className="space-y-10">
+              {/* Dental Call Insights */}
+              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Dental Call Insights
+                </h3>
+                <p className="text-lg text-olive-400 font-semibold mb-4">
+                  AI-Powered Call Analytics Platform for Healthcare
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Designed, built, and launched an affordable Generative AI web application for dental and
+                  healthcare offices to gain call center performance and customer insights. Leveraged Next.js,
+                  Supabase, and OpenAI&apos;s GPT-4 to create an end-to-end analytics platform featuring automated
+                  transcription, sentiment analysis, quality scoring, and semantic search capabilities.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Product Strategy & Market Research:</strong> Conducted customer interviews
+                      and market research to define product requirements, translating healthcare business needs into technical
+                      product specifications
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Full-Stack Development:</strong> Built complete web application using
+                      Next.js 14, TypeScript, Supabase (PostgreSQL with pgvector), and integrated multiple OpenAI models
+                      (GPT-4, Whisper, text-embedding-ada-002) for AI-driven insights
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Customer Success:</strong> Successfully onboarded and provided at-cost
+                      services to a small, low-income dental practice in Southern California, demonstrating product-market fit
+                      and social impact
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Technical Innovation:</strong> Implemented semantic search using vector
+                      embeddings, automated QA scoring with 15+ evaluation criteria, and multi-language transcription support
+                      for English and Spanish
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Next.js
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    OpenAI GPT-4
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Supabase
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    PostgreSQL
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Vercel
+                  </span>
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://github.com/rickyelder07/dentalcallinsights"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                  >
+                    View on GitHub
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* NetFuel */}
+              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  NetFuel
+                </h3>
+                <p className="text-lg text-olive-400 font-semibold mb-4">
+                  iOS Calorie Tracking App with Strava Integration
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Developed a comprehensive iOS health tracking application that integrates with Strava API to
+                  automatically sync workouts and calculate net calorie balance. Built using SwiftUI and Supabase,
+                  the app combines USDA nutrition data with real-time activity tracking to provide users with
+                  personalized daily calorie requirements (BMR/TDEE) and comprehensive health analytics.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">iOS Development:</strong> Built native iOS app using SwiftUI,
+                      implementing MVVM architecture with Combine framework for reactive state management
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">API Integration:</strong> Integrated Strava OAuth 2.0 for activity
+                      synchronization and USDA FoodData Central API for comprehensive nutritional database access with
+                      70,000+ food items
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Health Analytics:</strong> Implemented BMR/TDEE calculations using
+                      Mifflin-St Jeor equation, daily calorie tracking with macro breakdowns (protein, carbs, fats), and
+                      progress visualization with photos and weight measurements
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Backend Infrastructure:</strong> Leveraged Supabase for PostgreSQL
+                      database, authentication, and cloud storage with Row Level Security policies ensuring data privacy
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    Swift
+                  </span>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    SwiftUI
+                  </span>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    Strava API
+                  </span>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    USDA API
+                  </span>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    Supabase
+                  </span>
+                  <span className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                    PostgreSQL
+                  </span>
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://github.com/rickyelder07/NetFuel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                  >
+                    View on GitHub
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -413,6 +634,9 @@ export default function ExperiencePage() {
                 { name: "TypeScript", url: "https://www.typescriptlang.org/" },
                 { name: "HTML", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
                 { name: "CSS", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+                { name: "Swift", url: "https://www.swift.org/" },
+                { name: "Xcode", url: "https://developer.apple.com/xcode/" },
+                { name: "Apple Dev", url: "https://developer.apple.com/" },
                 { name: "Cursor", url: "https://www.cursor.com/" },
                 { name: "Claude", url: "https://www.anthropic.com/claude" },
                 { name: "Vercel", url: "https://vercel.com/" },
