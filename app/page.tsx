@@ -79,10 +79,10 @@ export default function Home() {
               />
             </div>
           </motion.div>
-          
+
           {/* Main Content - Right Side */}
           <div className="order-1 lg:order-2">
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -92,16 +92,16 @@ export default function Home() {
                 Ricky Elder
               </span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl md:text-2xl text-gray-300 mb-8 font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Product Manager and Professional Business Leader leveraging a novel startup background to connect organizational objectives to product strategy.
+              GTM strategist and Product leader with a startup pedigree. Connecting customer insights, market strategy, and product execution to drive growth.
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -273,19 +273,19 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Explore My Journey
           </h2>
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl text-gray-300 leading-relaxed text-center max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            I am an analytical thinker who loves to understand corporate strategic decisions and 
-            optimize life through data. Growing up in the Bay Area, I live and breathe tech and aim to leverage my skills and experience to transform products 
-            that have a global impact. 
+            I am an analytical thinker who loves to understand corporate strategic decisions and
+            optimize life through data. Growing up in the Bay Area, I live and breathe tech and aim to leverage my skills and experience to transform products
+            that have a global impact.
           </motion.p>
         </motion.div>
-        
+
         <motion.div
           variants={containerVariants}
           initial="hidden"

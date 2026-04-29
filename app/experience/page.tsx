@@ -402,7 +402,7 @@ export default function ExperiencePage() {
                 Professional Development & Applied Engineering Projects
               </h2>
               <p className="text-xl text-olive-400">
-                Aug 2024 - Present
+                Aug 2025 - Present
               </p>
             </div>
 
