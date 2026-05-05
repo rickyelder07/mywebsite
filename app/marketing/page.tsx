@@ -325,8 +325,8 @@ export default function MarketingPage() {
             <p className="text-xl text-gray-300 max-w-3xl mb-4 leading-relaxed">
               As Director of Marketing at Zero Emission Industries, I drove all marketing activities
               across the organization — from video production and sales collateral to event strategy
-              and earned media. This isn't a full picture of that work; I lost access to much of the
-              content after leaving the company, but I'm happy to share more — just reach out.
+              and earned media. This isn&apos;t a full picture of that work; I lost access to much of the
+              content after leaving the company, but I&apos;m happy to share more — just reach out.
             </p>
             <p className="text-base text-gray-400 max-w-3xl mb-10 leading-relaxed">
               During a brand pivot to defense, I also built{" "}
@@ -338,7 +338,7 @@ export default function MarketingPage() {
               >
                 zeroei.com <ExternalLinkIcon />
               </a>
-              {" "}— ZEI's public-facing site repositioned for government and defense audiences.
+              {" "}— ZEI&apos;s public-facing site repositioned for government and defense audiences.
             </p>
 
             {/* Section jump links */}

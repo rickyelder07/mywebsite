@@ -139,9 +139,9 @@ export default function ExperiencePage() {
             Experience Snapshot
           </h1>
           <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
-            My career as an emerging business professional has been defined by growth through 
-            discomfort and a willingness to learn from others with curiosity and 
-            egoless collaboration. 
+            My career as an emerging business professional has been defined by growth through
+            discomfort and a willingness to learn from others with curiosity and
+            egoless collaboration.
           </p>
         </motion.div>
       </div>
@@ -182,14 +182,14 @@ export default function ExperiencePage() {
                 </p>
               </div>
             </div>
-            
+
             <p className="text-lg text-gray-300 leading-relaxed mb-12">
-              I&apos;ve had the opportunity to help a hydrogen technology company grow from 3 to 20+ employees. Throughout that time I earned significant responsibility as a leader 
-              in multiple cross-functional roles supporting the development of novel products in an 
-              emerging market. While working countless long nights and weekends I project managed 
-              multiple world firsts, launched a novel hydrogen refueling product, built a marketing 
+              I&apos;ve had the opportunity to help a hydrogen technology company grow from 3 to 20+ employees. Throughout that time I earned significant responsibility as a leader
+              in multiple cross-functional roles supporting the development of novel products in an
+              emerging market. While working countless long nights and weekends I project managed
+              multiple world firsts, launched a novel hydrogen refueling product, built a marketing
               org, helped run board meetings,  was tested creatively,
-              led multiple teams and strategic company initiatives, got my Commercial HazMat License 
+              led multiple teams and strategic company initiatives, got my Commercial HazMat License
               to fuel a race car, and made some friends for life.
             </p>
 
@@ -200,7 +200,7 @@ export default function ExperiencePage() {
                   Cross-Functional Leadership
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  While at ZEI I led a team or ran point in all of these organizational units and know I can 
+                  While at ZEI I led a team or ran point in all of these organizational units and know I can
                   effectively communicate and facilitate cross-functionally.
                 </p>
 
@@ -230,7 +230,7 @@ export default function ExperiencePage() {
               <h3 className="text-3xl font-bold text-white mb-8">
                 Roles & Timeline
               </h3>
-              
+
               <div className="space-y-8">
                 {/* Director of Marketing */}
                 <div className="relative pl-8 border-l-2 border-olive-400/30">
@@ -599,7 +599,7 @@ export default function ExperiencePage() {
         >
           <div className="bg-olive-500/20 backdrop-blur-sm border border-olive-500/30 rounded-2xl p-6 md:p-8">
             <p className="text-xl text-gray-300 leading-relaxed font-medium">
-              I pride myself on my selflessness as a leader and my relentless attitude toward 
+              I pride myself on my selflessness as a leader and my relentless attitude toward
               achieving the commitments I make to my team and to myself.
             </p>
           </div>
@@ -650,6 +650,7 @@ export default function ExperiencePage() {
                   className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-400/30 hover:border-blue-400/50 rounded-lg transition-all text-sm text-blue-100 hover:text-white font-medium"
                 >
                   {!['JavaScript', 'HTML', 'CSS'].includes(tool.name) && (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
                       alt={`${tool.name} icon`}
@@ -688,6 +689,7 @@ export default function ExperiencePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/30 hover:border-purple-400/50 rounded-lg transition-all text-sm text-purple-100 hover:text-white font-medium"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
                     alt={`${tool.name} icon`}
@@ -721,6 +723,7 @@ export default function ExperiencePage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 border border-green-400/30 hover:border-green-400/50 rounded-lg transition-all text-sm text-green-100 hover:text-white font-medium"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`https://www.google.com/s2/favicons?domain=${tool.url}&sz=32`}
                     alt={`${tool.name} icon`}
