@@ -26,17 +26,24 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer components {
   .glass-card {
     @apply bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl;
   }
-  
+
   .light-card {
     @apply bg-white dark:bg-black/30 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-2xl;
   }
-  
+
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
