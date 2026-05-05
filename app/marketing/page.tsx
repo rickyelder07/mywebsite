@@ -126,7 +126,7 @@ const events = [
       "Engaged defense contractors and government stakeholders",
       "Positioned ZEI hydrogen tech for defense use cases",
     ],
-    images: ["/Events/TEVCON Booth.JPG", "/Events/TEVCON 2.JPG", "/Events/TEVCON 3.JPG"],
+    images: ["/Events/TEVCON 1.JPG", "/Events/TEVCON 2.JPG", "/Events/TEVCON 3.JPG"],
     attendees: "500+",
   },
   {
