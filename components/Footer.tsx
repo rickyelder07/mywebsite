@@ -10,9 +10,6 @@ export default function Footer() {
             <div className="text-2xl font-bold text-white mb-2">
               RE
             </div>
-            <p className="text-sm text-gray-400">
-              Data-driven Product Manager connecting business objectives to product strategy
-            </p>
           </div>
 
           {/* Quick Links */}
