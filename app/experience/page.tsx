@@ -583,6 +583,78 @@ export default function ExperiencePage() {
                   </a>
                 </div>
               </div>
+
+              {/* Haydn */}
+              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Haydn
+                </h3>
+                <p className="text-lg text-olive-400 font-semibold mb-4">
+                  AI-Powered Browser-Based MIDI Editor
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Built a browser-based MIDI editor that integrates GPT-4o to translate natural language
+                  instructions into musical edits and full multi-track compositions. Features a canvas-based
+                  piano roll, real-time synthesis via Tone.js, and support for standard MIDI and MusicXML
+                  import/export — all built with Next.js 15, React 19, and TypeScript.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">AI Composition:</strong> Integrated GPT-4o to generate full
+                      multi-track arrangements from text prompts across genre templates (lofi, jazz, classical, trap,
+                      and more) with persistent conversational context
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Piano Roll Editor:</strong> Canvas-based editor with zoom,
+                      undo/redo, drag-and-drop note editing, and a floating resizable AI panel for in-context
+                      track modifications
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Real-Time Audio:</strong> Tone.js-powered synthesis with
+                      transport controls, tempo adjustment, up to 32 tracks, and MIDI controller/keyboard
+                      support for step recording
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Music Theory Validation:</strong> Scale and chord verification
+                      with visual feedback, plus token transparency showing GPT-4o usage and estimated costs
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {["Next.js 15", "React 19", "TypeScript", "GPT-4o", "Tone.js", "Tailwind CSS", "Zustand"].map((tag) => (
+                    <span key={tag} className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://github.com/rickyelder07/Haydn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                  >
+                    View on GitHub
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
