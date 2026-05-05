@@ -114,25 +114,8 @@ const collateral = [
 const events = [
   {
     id: 1,
-    name: "American Clean Transportation Expo",
-    date: "May 2024",
-    location: "Long Beach, CA",
-    role: "Marketing Lead",
-    type: "Industry Expo",
-    description:
-      "Drove product material and brand messaging for the commercial transportation audience at North America's largest clean tech event. Created the opportunity to live demo FTcase alongside hydrogen truck OEMs — a first for ZEI in the commercial market.",
-    highlights: [
-      "Live FTcase demo with hydrogen truck OEM partners",
-      "Commercial market-targeted brand messaging and collateral",
-      "Engaged fleet operators, carriers, and commercial buyers",
-    ],
-    images: ["/Events/ACT Demo.JPG"],
-    attendees: "10,000+",
-  },
-  {
-    id: 2,
     name: "TEVCON",
-    date: "2024",
+    date: "April 2025",
     location: "San Diego, CA",
     role: "Booth Manager",
     type: "Defense Conference",
@@ -143,8 +126,25 @@ const events = [
       "Engaged defense contractors and government stakeholders",
       "Positioned ZEI hydrogen tech for defense use cases",
     ],
-    images: ["/Events/TEVCON Banner.jpeg", "/Events/Tevcon Booth.JPG"],
+    images: ["/Events/TEVCON Booth.JPG", "/Events/TEVCON 2.JPG", "/Events/TEVCON 3.JPG"],
     attendees: "500+",
+  },
+  {
+    id: 2,
+    name: "Pikes Peak International Hill Climb",
+    date: "June 2025",
+    location: "Colorado Springs, CO",
+    role: "Fueling Partner & PR",
+    type: "Race Event",
+    description:
+      "Supported Honda Racing Corporation in their first-ever attempt at Pikes Peak with a hydrogen-powered race car. ZEI served as the sole fueling partner — leveraging the event through press placements and Fan Day activation to drive broad public engagement.",
+    highlights: [
+      "Sole hydrogen fueling partner for HRC's Pikes Peak debut",
+      "Press placements throughout the race weekend",
+      "Fan Day activation with hands-on hydrogen technology demo",
+    ],
+    images: ["/Events/HRC 1.jpg", "/Events/HRC 2.JPG", "/Events/HRC 3.jpg"],
+    attendees: "30,000+",
   },
   {
     id: 3,
@@ -169,64 +169,64 @@ const events = [
   },
   {
     id: 4,
-    name: "Pikes Peak International Hill Climb",
-    date: "June 2024",
-    location: "Colorado Springs, CO",
-    role: "Fueling Partner & PR",
-    type: "Race Event",
+    name: "American Clean Transportation Expo",
+    date: "May 2024",
+    location: "Long Beach, CA",
+    role: "Marketing Lead",
+    type: "Industry Expo",
     description:
-      "Supported Honda Racing Corporation in their first-ever attempt at Pikes Peak with a hydrogen-powered race car. ZEI served as the sole fueling partner — leveraging the event through press placements and Fan Day activation to drive broad public engagement.",
+      "Drove product material and brand messaging for the commercial transportation audience at North America's largest clean tech event. Created the opportunity to live demo FTcase alongside hydrogen truck OEMs — a first for ZEI in the commercial market.",
     highlights: [
-      "Sole hydrogen fueling partner for HRC's Pikes Peak debut",
-      "Press placements throughout the race weekend",
-      "Fan Day activation with hands-on hydrogen technology demo",
+      "Live FTcase demo with hydrogen truck OEM partners",
+      "Commercial market-targeted brand messaging and collateral",
+      "Engaged fleet operators, carriers, and commercial buyers",
     ],
-    images: ["/Events/HRC 1.jpg", "/Events/HRC 2.JPG"],
-    attendees: "30,000+",
+    images: ["/Events/ACT Demo.JPG", "/Events/ACT Expo.jpg"],
+    attendees: "10,000+",
   },
 ];
 
 const press = [
   {
     id: 1,
-    publication: "Marine Industry Today",
+    publication: "Forbes",
     headline:
-      "Zero Emission Industries Launches H2OS, a First-of-Kind Marine Fleet Intelligence Platform",
+      "Suitcase-Sized Device To Pump Hydrogen Into Honda Fuel Cell Pikes Peak Racer",
     quote:
-      "ZEI's H2OS represents a paradigm shift in how maritime operators think about vessel management — combining emissions monitoring with predictive maintenance in a single, elegant interface.",
-    date: "July 2024",
-    link: "#",
+      "The FTcase is barely larger than carry-on luggage but can transform any gaseous hydrogen supply into a complete hydrogen fueling station — enabling Honda Racing's historic first-ever hydrogen-powered attempt at Pikes Peak.",
+    date: "June 2025",
+    link: "https://www.forbes.com/sites/edgarsten/2025/06/18/suitcase-sized-device-to-pump-hydrogen-into-honda-fuel-cell-pikes-peak-racer/",
     type: "Feature",
   },
   {
     id: 2,
-    publication: "CleanTech Weekly",
-    headline: "The Startups Leading Zero-Emission Shipping",
+    publication: "Automotive News — Shift Podcast",
+    headline: "ZEI's John Motlow on Solving Hydrogen Infrastructure Challenges (Episode 273)",
     quote:
-      "Among a new class of maritime cleantech companies, Zero Emission Industries stands out for its full-stack approach — building both the physical vessels and the software layer to manage them.",
-    date: "April 2024",
-    link: "#",
-    type: "Roundup",
+      "Motlow outlined how ZEI's portable fueling technology is tackling the 'chicken and egg' problem of hydrogen adoption — making it possible to operate where no infrastructure exists.",
+    date: "October 2024",
+    link: "https://www.autonews.com/podcasts/shift/an-john-motlow-hydrogen-infrastructure/",
+    type: "Podcast",
   },
   {
     id: 3,
-    publication: "Pacific Business Journal",
-    headline: "ZEI Closes Series A, Plans Fleet Expansion Along Pacific Coast",
+    publication: "Fast Company",
+    headline: "The World's First Hydrogen-Fueled Ferry Service Just Started Running in San Francisco",
     quote:
-      "The company's marketing approach — emphasizing total cost of ownership rather than environmental impact alone — has resonated with pragmatic fleet operators.",
-    date: "January 2024",
-    link: "#",
-    type: "News",
+      "It's the only vessel in the world where you can actually drink the exhaust — a milestone made possible by the hydrogen fuel cell powertrain developed by Zero Emission Industries.",
+    date: "2024",
+    link: "https://www.fastcompany.com/91154662/the-worlds-first-hydrogen-fueled-ferry-service-just-started-running-in-san-francisco",
+    type: "Feature",
   },
   {
     id: 4,
-    publication: "Sustainable Shipping Magazine",
-    headline: "Pacific Marine Expo: Standout Booths and Breakout Companies",
+    publication: "The InEVitable — MotorTrend",
+    headline: "Hydrogen Powered Boats with Zero Emission Industries CEO Joe Pratt",
     quote:
-      "ZEI's booth was arguably the most professionally executed at the show — a seamless blend of live product demonstrations and polished brand storytelling.",
-    date: "December 2023",
-    link: "#",
-    type: "Trade Coverage",
+      "Joe Pratt joins MotorTrend's Ed Loh and Jonny Lieberman to break down how ZEI is bringing hydrogen fuel cell technology to the marine industry — and why boats may be hydrogen's killer app.",
+    date: "December 2024",
+    link: "https://www.youtube.com/watch?v=kjmUG-lo0k4",
+    type: "Video Podcast",
   },
 ];
 
@@ -322,31 +322,23 @@ export default function MarketingPage() {
               Content &{" "}
               <span className="text-olive-400">Creative Work</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mb-10 leading-relaxed">
-              A curated collection of marketing work developed while leading brand, content, and
-              go-to-market strategy at Zero Emission Industries — spanning video production,
-              thought leadership, event marketing, and earned media.
+            <p className="text-xl text-gray-300 max-w-3xl mb-4 leading-relaxed">
+              As Director of Marketing at Zero Emission Industries, I drove all marketing activities
+              across the organization — from video production and sales collateral to event strategy
+              and earned media. This portfolio spans that full scope of work.
             </p>
-
-            {/* Stats row */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="flex flex-wrap gap-6 mb-12"
-            >
-              {[
-                { label: "Video Assets", value: `${videos.length}` },
-                { label: "Collateral Pieces", value: `${collateral.length}` },
-                { label: "Events Led", value: `${events.length}` },
-                { label: "Press Features", value: `${press.length}+` },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <p className="text-2xl font-bold text-olive-400">{stat.value}</p>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mt-0.5">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
+            <p className="text-base text-gray-400 max-w-3xl mb-10 leading-relaxed">
+              During a brand pivot to defense, I also built{" "}
+              <a
+                href="https://www.zeroei.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-olive-400 font-semibold border-b border-olive-400/50 hover:border-olive-400 hover:text-olive-300 transition-all duration-200"
+              >
+                zeroei.com <ExternalLinkIcon />
+              </a>
+              {" "}— ZEI's public-facing site repositioned for government and defense audiences.
+            </p>
 
             {/* Section jump links */}
             <div className="flex flex-wrap gap-3">
@@ -864,6 +856,8 @@ export default function MarketingPage() {
               <motion.a
                 key={item.id}
                 href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={itemVariants}
                 className="glass-card p-8 block group hover:bg-black/40 transition-all duration-300 flex flex-col"
               >
