@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { TargetIcon, RocketIcon, SparklesIcon } from "@/components/icons";
+import { TargetIcon, RocketIcon, MegaphoneIcon } from "@/components/icons";
 
 const sections = [
   {
@@ -21,10 +21,10 @@ const sections = [
     gradient: "from-olive-600/20 to-olive-500/20",
   },
   {
-    title: "Personal",
-    href: "/personal",
-    description: "Music, family, sports, and the things that make me who I am",
-    Icon: SparklesIcon,
+    title: "Marketing Portfolio",
+    href: "/marketing",
+    description: "Video production, sales collateral, event strategy, and earned media from my time at ZEI",
+    Icon: MegaphoneIcon,
     gradient: "from-olive-400/20 to-olive-300/20",
   },
 ];

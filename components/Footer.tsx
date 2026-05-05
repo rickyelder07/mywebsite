@@ -29,6 +29,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="/marketing" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Marketing Portfolio
+                </a>
+              </li>
+              <li>
                 <a href="/personal" className="text-sm text-gray-400 hover:text-white transition-colors">
                   Personal
                 </a>
