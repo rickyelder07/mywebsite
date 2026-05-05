@@ -293,8 +293,15 @@ export default function ProductPage() {
 
                     {/* Honda Racing Racecar Fueled by FTcase and FTcase Fueling Side by Side */}
                     <div>
-                      <h4 className="text-xl font-bold text-white text-center mb-3">
-                        Honda Racing Fuel Cell CRV Fueled by FTcase
+                      <h4 className="text-xl font-bold text-center mb-3">
+                        <a
+                          href="https://www.forbes.com/sites/edgarsten/2025/06/18/suitcase-sized-device-to-pump-hydrogen-into-honda-fuel-cell-pikes-peak-racer/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white hover:text-gray-300 transition-colors underline decoration-white/50 hover:decoration-gray-300 decoration-2 underline-offset-4 inline-flex items-center gap-2"
+                        >
+                          Honda Racing Fuel Cell CRV Fueled by FTcase
+                        </a>
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="relative w-full aspect-video rounded-lg overflow-hidden">
