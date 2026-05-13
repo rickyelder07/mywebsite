@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ricky Elder - Product Manager",
+    default: "Ricky Elder's Website",
     template: "%s | Ricky Elder",
   },
   description: "Data-driven Product Manager connecting business objectives to product strategy, leveraging AI to build engaging customer solutions.",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rickyelder.com",
-    title: "Ricky Elder - Product Manager",
+    title: "Ricky Elder's Website",
     description: "Data-driven Product Manager connecting business objectives to product strategy, leveraging AI to build engaging customer solutions.",
     siteName: "Ricky Elder",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ricky Elder - Product Manager",
+    title: "Ricky Elder's Website",
     description: "Data-driven Product Manager connecting business objectives to product strategy, leveraging AI to build engaging customer solutions.",
   },
 };
