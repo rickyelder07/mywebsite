@@ -121,8 +121,25 @@ const featuredProjects = [
   },
 ];
 
+const paceBeatImages = [
+  "/Pace Beat/IMG_1.jpg",
+  "/Pace Beat/IMG_2.jpg",
+  "/Pace Beat/IMG_3.jpg",
+  "/Pace Beat/IMG_4.jpg",
+  "/Pace Beat/IMG_5.PNG",
+];
+
+const netFuelImages = [
+  "/Net Fuel/NetFuel 1.png",
+  "/Net Fuel/Netfuel 2.png",
+  "/Net Fuel/Netfuel 3.png",
+  "/Net Fuel/Netfuel 4.png",
+];
+
 export default function ExperiencePage() {
   const [isFeaturedProjectsOpen, setIsFeaturedProjectsOpen] = useState(false);
+  const [paceBeatIndex, setPaceBeatIndex] = useState(0);
+  const [netFuelIndex, setNetFuelIndex] = useState(0);
 
   return (
     <div className="min-h-screen">
@@ -258,11 +275,11 @@ export default function ExperiencePage() {
                   </p>
                 </div>
 
-                {/* Junior Manager, Special Projects */}
+                {/* Program Manager */}
                 <div className="relative pl-8 border-l-2 border-olive-400/30">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-olive-400" />
                   <div className="mb-2">
-                    <h4 className="text-xl font-bold text-white">Junior Manager, Special Projects</h4>
+                    <h4 className="text-xl font-bold text-white">Program Manager</h4>
                     <p className="text-olive-400 font-semibold">Aug 2020 - Sep 2022 · 2 yrs 2 mos</p>
                   </div>
                   <p className="text-gray-300 leading-relaxed">
@@ -307,7 +324,7 @@ export default function ExperiencePage() {
               </button>
 
               {isFeaturedProjectsOpen && (
-                <div className="space-y-10">
+                <div className="space-y-4">
                 {featuredProjects.map((project, index) => (
                   <motion.div
                     key={index}
@@ -315,69 +332,55 @@ export default function ExperiencePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10 hover:bg-white/8 transition-all"
+                    className="bg-white/5 rounded-lg border border-white/10 p-6 hover:bg-white/8 transition-all"
                   >
-                    {/* Project Header */}
-                    <div className="mb-6">
-                      <h4 className="text-2xl font-bold text-white mb-2">
-                        {project.title}
-                      </h4>
-                      <p className="text-lg text-olive-400 font-semibold mb-4">
-                        {project.subtitle}
-                      </p>
-                      <p className="text-gray-300 leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
+                    <div className="flex flex-col md:flex-row gap-6 items-start">
+                      {/* Text */}
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl font-bold text-white mb-1">
+                          {project.title}
+                        </h4>
+                        <p className="text-sm text-olive-400 font-semibold mb-3">
+                          {project.subtitle}
+                        </p>
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {project.description}
+                        </p>
+                        {project.links.length > 0 && (
+                          <div className="flex flex-wrap gap-3 mt-4">
+                            {project.links.map((link, linkIndex) => (
+                              <a
+                                key={linkIndex}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-xs font-medium"
+                              >
+                                {link.text}
+                                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
 
-                    {/* Image Section */}
-                    {project.images.length > 0 && (
-                      <div className="my-8">
-                        <div className="grid grid-cols-1 gap-6">
-                          {project.images.map((img, imgIndex) => (
-                            <div key={imgIndex} className="relative w-full aspect-video rounded-lg overflow-hidden bg-white/5 border border-white/10">
-                              <Image
-                                src={img}
-                                alt={`${project.title}`}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1000px"
-                              />
-                            </div>
-                          ))}
+                      {/* Image */}
+                      {project.images.length > 0 && (
+                        <div className="w-full md:w-56 flex-shrink-0">
+                          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10">
+                            <Image
+                              src={project.images[0]}
+                              alt={project.title}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 100vw, 224px"
+                            />
+                          </div>
                         </div>
-                      </div>
-                    )}
-
-                    {/* Links Section */}
-                    {project.links.length > 0 && (
-                      <div className="flex flex-wrap gap-4 mt-6">
-                        {project.links.map((link, linkIndex) => (
-                          <a
-                            key={linkIndex}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
-                          >
-                            {link.text}
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                              />
-                            </svg>
-                          </a>
-                        ))}
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -388,7 +391,7 @@ export default function ExperiencePage() {
       </div>
 
       {/* Professional Development Section */}
-      <div className="section-container py-12">
+      <div id="professional-development" className="section-container py-12 scroll-mt-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -414,92 +417,6 @@ export default function ExperiencePage() {
 
             {/* Projects */}
             <div className="space-y-10">
-              {/* Dental Call Insights */}
-              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Dental Call Insights
-                </h3>
-                <p className="text-lg text-olive-400 font-semibold mb-4">
-                  AI-Powered Call Analytics Platform for Healthcare
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Designed, built, and launched an affordable Generative AI web application for dental and
-                  healthcare offices to gain call center performance and customer insights. Leveraged Next.js,
-                  Supabase, and OpenAI&apos;s GPT-4 to create an end-to-end analytics platform featuring automated
-                  transcription, sentiment analysis, quality scoring, and semantic search capabilities.
-                </p>
-
-                <div className="space-y-3 mb-6">
-                  <div className="flex gap-3">
-                    <span className="text-olive-400 mt-1">•</span>
-                    <p className="text-gray-300">
-                      <strong className="text-white">Product Strategy & Market Research:</strong> Conducted customer interviews
-                      and market research to define product requirements, translating healthcare business needs into technical
-                      product specifications
-                    </p>
-                  </div>
-                  <div className="flex gap-3">
-                    <span className="text-olive-400 mt-1">•</span>
-                    <p className="text-gray-300">
-                      <strong className="text-white">Full-Stack Development:</strong> Built complete web application using
-                      Next.js 14, TypeScript, Supabase (PostgreSQL with pgvector), and integrated multiple OpenAI models
-                      (GPT-4, Whisper, text-embedding-ada-002) for AI-driven insights
-                    </p>
-                  </div>
-                  <div className="flex gap-3">
-                    <span className="text-olive-400 mt-1">•</span>
-                    <p className="text-gray-300">
-                      <strong className="text-white">Customer Success:</strong> Successfully onboarded and provided at-cost
-                      services to a small, low-income dental practice in Southern California, demonstrating product-market fit
-                      and social impact
-                    </p>
-                  </div>
-                  <div className="flex gap-3">
-                    <span className="text-olive-400 mt-1">•</span>
-                    <p className="text-gray-300">
-                      <strong className="text-white">Technical Innovation:</strong> Implemented semantic search using vector
-                      embeddings, automated QA scoring with 15+ evaluation criteria, and multi-language transcription support
-                      for English and Spanish
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    Next.js
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    TypeScript
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    OpenAI GPT-4
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    Supabase
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    PostgreSQL
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
-                    Vercel
-                  </span>
-                </div>
-
-                <div className="mt-6">
-                  <a
-                    href="https://github.com/rickyelder07/dentalcallinsights"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
-                  >
-                    View on GitHub
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-
               {/* NetFuel */}
               <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -545,6 +462,59 @@ export default function ExperiencePage() {
                       <strong className="text-white">Backend Infrastructure:</strong> Leveraged Supabase for PostgreSQL
                       database, authentication, and cloud storage with Row Level Security policies ensuring data privacy
                     </p>
+                  </div>
+                </div>
+
+                {/* Phone Spread */}
+                <div className="mb-6 py-6">
+                  <div className="flex items-center justify-center gap-2 md:gap-3">
+                    {netFuelImages.map((src, i) => {
+                      const distance = Math.abs(i - netFuelIndex);
+                      const isActive = i === netFuelIndex;
+                      const clampWidths = [
+                        "clamp(110px, 14vw, 200px)",
+                        "clamp(76px,  10vw, 138px)",
+                        "clamp(56px,   7vw, 100px)",
+                      ];
+                      const clampWidth = clampWidths[Math.min(distance, 2)];
+                      const sizesHints = [
+                        "(max-width: 640px) 220px, (max-width: 1024px) 300px, 400px",
+                        "(max-width: 640px) 152px, (max-width: 1024px) 210px, 276px",
+                        "(max-width: 640px) 112px, (max-width: 1024px) 154px, 200px",
+                      ];
+                      const sizesHint = sizesHints[Math.min(distance, 2)];
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => setNetFuelIndex(i)}
+                          aria-label={`View screenshot ${i + 1}`}
+                          className="relative flex-shrink-0 transition-all duration-300 ease-out"
+                          style={{ width: clampWidth }}
+                        >
+                          <div
+                            className={`relative w-full rounded-[1.6rem] overflow-hidden border-2 transition-all duration-300 ${
+                              isActive
+                                ? "border-olive-400 shadow-[0_0_32px_rgba(107,114,54,0.45)]"
+                                : "border-white/10 opacity-40 hover:opacity-65"
+                            }`}
+                            style={{ aspectRatio: "9 / 19" }}
+                          >
+                            <Image
+                              src={src}
+                              alt={`NetFuel screenshot ${i + 1}`}
+                              fill
+                              className="object-cover"
+                              sizes={sizesHint}
+                            />
+                          </div>
+                          {isActive && (
+                            <p className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] text-olive-400/70 font-medium whitespace-nowrap tracking-widest">
+                              {i + 1} / {netFuelImages.length}
+                            </p>
+                          )}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
 
@@ -633,6 +603,16 @@ export default function ExperiencePage() {
                   </div>
                 </div>
 
+                <div className="relative w-full rounded-xl overflow-hidden border border-white/10 mb-6" style={{ aspectRatio: "16 / 9" }}>
+                  <Image
+                    src="/Haydn/Haydn.jpg"
+                    alt="Haydn MIDI editor interface"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 900px"
+                  />
+                </div>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {["Next.js 15", "React 19", "TypeScript", "GPT-4o", "Tone.js", "Tailwind CSS", "Zustand"].map((tag) => (
                     <span key={tag} className="px-3 py-1 bg-purple-500/20 border border-purple-400/30 rounded-md text-purple-300 text-sm">
@@ -644,6 +624,225 @@ export default function ExperiencePage() {
                 <div className="mt-6">
                   <a
                     href="https://github.com/rickyelder07/Haydn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                  >
+                    View on GitHub
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Pacebeat */}
+              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Pacebeat
+                </h3>
+                <p className="text-lg text-olive-400 font-semibold mb-4">
+                  Spotify Playlist Generator Synced to Your Running Pace
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Built a full-stack web app that generates Spotify playlists where every track&apos;s BPM
+                  matches the user&apos;s target running cadence. Users input biometrics and a race goal
+                  (5K through marathon), select a music source from their Spotify library, and Pacebeat
+                  filters and assembles a perfectly paced playlist — saved directly to their Spotify account.
+                  Supports multi-segment workouts with warm-up and cooldown sequences.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Pace-to-BPM Engine:</strong> Converts target pace and user
+                      fitness profile into BPM ranges, then filters tracks from Liked Songs, existing playlists,
+                      or favorite artists with adjustable tolerance for variety vs. precision
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Tiered BPM Detection:</strong> Prioritizes Deezer API lookups
+                      via ISRC matching (server-side proxied through Cloudflare Workers), with a Web Audio API
+                      beat-detection fallback on 30-second previews — necessary after Spotify deprecated its audio
+                      features API in 2024
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Race Mode & Multi-Segment Workouts:</strong> Supports 5K, 10K,
+                      half, and full marathon pacing goals with configurable warm-up and cooldown segments, each with
+                      independent BPM targets
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Spotify Integration:</strong> Full PKCE Authorization Code flow
+                      for secure authentication, real-time BPM display per track, and track-level controls including
+                      reshuffle, individual song replacement, and manual reordering before saving to Spotify
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone Spread */}
+                <div className="mb-6 py-6">
+                  <div className="flex items-center justify-center gap-2 md:gap-3">
+                    {paceBeatImages.map((src, i) => {
+                      const distance = Math.abs(i - paceBeatIndex);
+                      const isActive = i === paceBeatIndex;
+                      // clamp(min, preferred-vw, max) — scales fluidly with viewport
+                      const clampWidths = [
+                        "clamp(110px, 14vw, 200px)",
+                        "clamp(76px,  10vw, 138px)",
+                        "clamp(56px,   7vw, 100px)",
+                      ];
+                      const clampWidth = clampWidths[Math.min(distance, 2)];
+                      // sizes hint: generous so Next.js serves full-res for retina screens
+                      const sizesHints = [
+                        "(max-width: 640px) 220px, (max-width: 1024px) 300px, 400px",
+                        "(max-width: 640px) 152px, (max-width: 1024px) 210px, 276px",
+                        "(max-width: 640px) 112px, (max-width: 1024px) 154px, 200px",
+                      ];
+                      const sizesHint = sizesHints[Math.min(distance, 2)];
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => setPaceBeatIndex(i)}
+                          aria-label={`View screenshot ${i + 1}`}
+                          className="relative flex-shrink-0 transition-all duration-300 ease-out"
+                          style={{ width: clampWidth }}
+                        >
+                          {/* Phone shell */}
+                          <div
+                            className={`relative w-full rounded-[1.6rem] overflow-hidden border-2 transition-all duration-300 ${
+                              isActive
+                                ? "border-olive-400 shadow-[0_0_32px_rgba(107,114,54,0.45)]"
+                                : "border-white/10 opacity-40 hover:opacity-65"
+                            }`}
+                            style={{ aspectRatio: "9 / 19" }}
+                          >
+                            {/* Notch */}
+                            <Image
+                              src={src}
+                              alt={`Pacebeat screenshot ${i + 1}`}
+                              fill
+                              className="object-cover"
+                              sizes={sizesHint}
+                            />
+                          </div>
+                          {/* Active indicator */}
+                          {isActive && (
+                            <p className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] text-olive-400/70 font-medium whitespace-nowrap tracking-widest">
+                              {i + 1} / {paceBeatImages.length}
+                            </p>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Spotify API", "Deezer API", "Cloudflare Workers", "Vite"].map((tag) => (
+                    <span key={tag} className="px-3 py-1 bg-green-500/20 border border-green-400/30 rounded-md text-green-300 text-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://github.com/rickyelder07/Pacebeat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"
+                  >
+                    View on GitHub
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Dental Call Insights */}
+              <div className="bg-white/5 rounded-lg border border-white/10 p-8 md:p-10">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Dental Call Insights
+                </h3>
+                <p className="text-lg text-olive-400 font-semibold mb-4">
+                  AI-Powered Call Analytics Platform for Healthcare
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Designed, built, and launched an affordable Generative AI web application for dental and
+                  healthcare offices to gain call center performance and customer insights. Leveraged Next.js,
+                  Supabase, and OpenAI&apos;s GPT-4 to create an end-to-end analytics platform featuring automated
+                  transcription, sentiment analysis, quality scoring, and semantic search capabilities.
+                </p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Product Strategy & Market Research:</strong> Conducted customer interviews
+                      and market research to define product requirements, translating healthcare business needs into technical
+                      product specifications
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Full-Stack Development:</strong> Built complete web application using
+                      Next.js 14, TypeScript, Supabase (PostgreSQL with pgvector), and integrated multiple OpenAI models
+                      (GPT-4, Whisper, text-embedding-ada-002) for AI-driven insights
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Customer Success:</strong> Successfully onboarded and provided at-cost
+                      services to a small, low-income dental practice in Southern California, demonstrating product-market fit
+                      and social impact
+                    </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <span className="text-olive-400 mt-1">•</span>
+                    <p className="text-gray-300">
+                      <strong className="text-white">Technical Innovation:</strong> Implemented semantic search using vector
+                      embeddings, automated QA scoring with 15+ evaluation criteria, and multi-language transcription support
+                      for English and Spanish
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Next.js
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    TypeScript
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    OpenAI GPT-4
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Supabase
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    PostgreSQL
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-400/30 rounded-md text-blue-300 text-sm">
+                    Vercel
+                  </span>
+                </div>
+
+                <div className="mt-6">
+                  <a
+                    href="https://github.com/rickyelder07/dentalcallinsights"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-olive-500/20 hover:bg-olive-500/30 border border-olive-500/30 rounded-lg text-olive-400 hover:text-olive-300 transition-all text-sm font-medium"

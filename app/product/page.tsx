@@ -46,19 +46,6 @@ const frameworks = [
 
 const products = [
   {
-    name: "Dental Call Insights",
-    tagline: "Transforming Healthcare Call Recordings into Actionable Insights.",
-    description: "Built an AI-driven analytics platform to support a low-income dental practice in Southern California, increasing call center transparency and patient engagement understanding. Interviewed with the leadership team of the dental firm to define product requirements and features, leveraging AI assisted coding tools to build, host, and deliver the product myself.",
-    highlights: [
-      "Requirements Gathering - Conducted stakeholder interviews with dental practice leadership to define product requirements and features, translating healthcare business needs into technical product specifications",
-      "End-to-End Product Delivery - Leveraged AI-assisted coding tools to build, host, and deliver the analytics platform, combining product management strategy with hands-on technical execution",
-      "Customer-Centric Product Definition - Defined product features focused on increasing call center transparency and patient engagement understanding for a low-income healthcare setting",
-      "AI-Driven Solution Design - Architected and implemented an AI-driven analytics platform to transform call recordings into actionable insights, demonstrating technical product management capabilities",
-    ],
-    tags: ["0 to 1", "Hardware", "Software", "Customer Development", "Launch Strategy"],
-    imageNote: "Space for product photos",
-  },
-  {
     name: "FTcase",
     tagline: "Software Driven Hydrogen Fueling Device for Automated Gaseous Fuel Transfer.",
     description: "Supported product development from inception to launch for a breakthrough hydrogen fuel cell technology designed for enabling technology adoption in an emerging and dynamic market. Worked closely with product engineering, and GTM teams to define and execute along organizational product development process.",
@@ -96,6 +83,19 @@ const products = [
     ],
     tags: ["Hard Tech", "Requirements Gathering", "Prototype Development", "B2B", "Defense Tech"],
     imageNote: "Space for engine specifications and photos",
+  },
+  {
+    name: "Dental Call Insights",
+    tagline: "Transforming Healthcare Call Recordings into Actionable Insights.",
+    description: "Built an AI-driven analytics platform to support a low-income dental practice in Southern California, increasing call center transparency and patient engagement understanding. Interviewed with the leadership team of the dental firm to define product requirements and features, leveraging AI assisted coding tools to build, host, and deliver the product myself.",
+    highlights: [
+      "Requirements Gathering - Conducted stakeholder interviews with dental practice leadership to define product requirements and features, translating healthcare business needs into technical product specifications",
+      "End-to-End Product Delivery - Leveraged AI-assisted coding tools to build, host, and deliver the analytics platform, combining product management strategy with hands-on technical execution",
+      "Customer-Centric Product Definition - Defined product features focused on increasing call center transparency and patient engagement understanding for a low-income healthcare setting",
+      "AI-Driven Solution Design - Architected and implemented an AI-driven analytics platform to transform call recordings into actionable insights, demonstrating technical product management capabilities",
+    ],
+    tags: ["0 to 1", "Hardware", "Software", "Customer Development", "Launch Strategy"],
+    imageNote: "Space for product photos",
   },
 
 ];
@@ -412,7 +412,7 @@ export default function ProductPage() {
                     <div className="flex justify-center">
                       <div className="relative w-3/4 max-w-5xl rounded-lg overflow-hidden">
                         <Image
-                          src="/DCI home page.png"
+                          src="/DCI/DCI home page.png"
                           alt="DCI Home Page"
                           width={1200}
                           height={675}
@@ -429,7 +429,7 @@ export default function ProductPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                           <Image
-                            src="/DCI - Transcribe.png"
+                            src="/DCI/DCI - Transcribe.png"
                             alt="DCI Call Transcription Interface"
                             width={1200}
                             height={675}
@@ -438,7 +438,7 @@ export default function ProductPage() {
                         </div>
                         <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                           <Image
-                            src="/DCI - Insights.png"
+                            src="/DCI/DCI - Insights.png"
                             alt="DCI Transcription Details"
                             width={1200}
                             height={675}
@@ -456,7 +456,7 @@ export default function ProductPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                           <Image
-                            src="/DCI Data Insights.png"
+                            src="/DCI/DCI Data Insights.png"
                             alt="DCI Data Analytics Dashboard"
                             width={1200}
                             height={675}
@@ -465,7 +465,7 @@ export default function ProductPage() {
                         </div>
                         <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                           <Image
-                            src="/DCI Data Insights 2.png"
+                            src="/DCI/DCI Data Insights 2.png"
                             alt="DCI Data Insights Details"
                             width={1200}
                             height={675}

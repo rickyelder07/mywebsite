@@ -190,7 +190,7 @@ export default function Home() {
           {/* Gen AI Experience */}
           <motion.div variants={itemVariants}>
             <Link
-              href="/product#dental-call-insights"
+              href="/experience#professional-development"
               target="_blank"
               rel="noopener noreferrer"
               className="block h-full p-8 glass-card hover:bg-black/40 transition-all hover:shadow-2xl group relative overflow-hidden"
@@ -206,7 +206,7 @@ export default function Home() {
                   Gen AI Experience
                 </h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors leading-relaxed">
-                  Built AI-driven analytics platform from concept to deployment for healthcare insights
+                  Building full-stack apps, iOS tools, and AI-powered products from concept to deployment
                 </p>
                 <div className="mt-6 flex items-center text-purple-400 font-medium group-hover:text-purple-300">
                   Learn more
